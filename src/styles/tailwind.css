@@ -1,0 +1,99 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: Switzer, system-ui, sans-serif;
+
+  --radius-4xl: 2rem;
+
+  /* Color Palette - White, Black, Orange/Yellow Theme */
+  --color-primary: #000000;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #f8f9fa;
+  --color-secondary-foreground: #000000;
+  --color-accent: #f59e0b;
+  --color-accent-foreground: #000000;
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #ffffff;
+  --color-muted: #f1f5f9;
+  --color-muted-foreground: #64748b;
+  --color-background: #ffffff;
+  --color-foreground: #000000;
+  --color-input: #e2e8f0;
+  --color-ring: #f59e0b;
+
+  /* Hero-specific colors */
+  --color-hero-primary: #000000;
+  --color-hero-primary-foreground: #ffffff;
+  --color-hero-secondary: #f8f9fa;
+  --color-hero-muted: #f1f5f9;
+  --color-hero-muted-foreground: #64748b;
+  --color-hero-accent: #f59e0b;
+  --color-hero-accent-foreground: #000000;
+  --color-hero-warning: #f59e0b;
+  --color-hero-success: #10b981;
+  --color-hero-destructive: #ef4444;
+
+  /* Gradient definitions */
+  --gradient-accent: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+  --gradient-hero: linear-gradient(135deg, #000000 0%, #374151 100%);
+}
+
+@keyframes move-x {
+  0% {
+    transform: translateX(var(--move-x-from));
+  }
+  100% {
+    transform: translateX(var(--move-x-to));
+  }
+}
+
+.prose {
+  --tw-prose-body: theme(colors.white / 80%);
+  --tw-prose-headings: theme(colors.white);
+  --tw-prose-lead: theme(colors.white / 90%);
+  --tw-prose-links: theme(colors.amber[400]);
+  --tw-prose-bold: theme(colors.white);
+  --tw-prose-counters: theme(colors.white / 70%);
+  --tw-prose-bullets: theme(colors.amber[400]);
+  --tw-prose-hr: theme(colors.white / 20%);
+  --tw-prose-quotes: theme(colors.white);
+  --tw-prose-quote-borders: theme(colors.amber[400]);
+  --tw-prose-captions: theme(colors.white / 70%);
+  --tw-prose-code: theme(colors.white);
+  --tw-prose-pre-code: theme(colors.white / 90%);
+  --tw-prose-pre-bg: theme(colors.neutral[800]);
+  --tw-prose-th-borders: theme(colors.white / 30%);
+  --tw-prose-td-borders: theme(colors.white / 20%);
+}
+
+.prose h1 {
+  @apply mb-8 text-4xl font-bold tracking-tight sm:text-5xl;
+}
+
+.prose h2 {
+  @apply mb-6 mt-12 text-3xl font-bold tracking-tight sm:text-4xl;
+}
+
+.prose h3 {
+  @apply mb-4 mt-10 text-2xl font-bold tracking-tight sm:text-3xl;
+}
+
+.prose p {
+  @apply my-6 text-lg leading-9;
+}
+
+.prose a {
+  @apply font-medium text-amber-400 transition-colors hover:text-amber-500;
+}
+
+.prose ul {
+  @apply my-6 list-disc space-y-4 pl-6;
+}
+
+.prose li {
+  @apply text-lg leading-8;
+}
+
+.prose blockquote {
+  @apply my-8 border-l-4 border-amber-400 pl-6 text-xl italic text-white/90;
+}

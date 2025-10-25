@@ -1,0 +1,50 @@
+import { Navbar } from '@/components/navbar'
+import { SanityLive } from '@/sanity/live'
+import { revalidateSyncTags } from '@/sanity/revalidateSyncTags'
+import '@/styles/tailwind.css'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: {
+    template: '%s - Radiant',
+    default: 'Radiant - Close every deal',
+  },
+}
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
+  return (
+    <html lang="en">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://api.fontshare.com/css?f%5B%5D=switzer@400,500,600,700&amp;display=swap"
+        />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="The Radiant Blog"
+          href="/blog/feed.xml"
+        />
+        {/* Calendly CSS and Script */}
+        <link
+          href="https://assets.calendly.com/assets/external/widget.css"
+          rel="stylesheet"
+        />
+        <script
+          src="https://assets.calendly.com/assets/external/widget.js"
+          type="text/javascript"
+          async
+        />
+      </head>
+      <body className="text-gray-950 antialiased">
+        <Navbar />
+        {children}
+        <SanityLive revalidateSyncTags={revalidateSyncTags} />
+      </body>
+    </html>
+  )
+}
