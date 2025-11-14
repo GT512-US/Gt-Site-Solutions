@@ -1,3 +1,5 @@
+'use client'
+
 import {
   ArrowRight,
   CheckCircle,
@@ -9,6 +11,24 @@ import {
 import { Button } from './button'
 
 export function Hero() {
+  const openCalPopup = () => {
+    if (typeof window !== 'undefined' && (window as any).Calendly) {
+      ;(window as any).Calendly.initPopupWidget({
+        url: 'https://calendly.com/dounia-gtsitesolutions',
+      })
+    } else {
+      // Fallback to opening in new tab if Calendly isn't loaded
+      window.open('https://calendly.com/dounia-gtsitesolutions', '_blank')
+    }
+  }
+
+  const scrollToPortfolio = () => {
+    const portfolioSection = document.getElementById('portfolio')
+    if (portfolioSection) {
+      portfolioSection.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <section className="relative min-h-screen overflow-hidden">
       {/* Background with modern overlay */}
@@ -88,12 +108,22 @@ export function Hero() {
 
                 {/* CTA buttons */}
                 <div className="flex flex-col gap-4 sm:flex-row">
-                  <Button variant="hero-primary" size="xl" className="group">
+                  <Button
+                    variant="hero-primary"
+                    size="xl"
+                    className="group"
+                    onClick={openCalPopup}
+                  >
                     <Phone className="h-5 w-5 transition-transform group-hover:scale-110" />
                     Get Free Quote Today
                   </Button>
 
-                  <Button variant="hero-secondary" size="xl" className="group">
+                  <Button
+                    variant="hero-secondary"
+                    size="xl"
+                    className="group"
+                    onClick={scrollToPortfolio}
+                  >
                     View Our Work
                     <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </Button>
