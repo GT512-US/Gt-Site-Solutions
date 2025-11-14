@@ -9,7 +9,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'About GT Site Solutions - Professional Exterior Cleaning Company',
   description:
-    "Learn about GT Site Solutions, Austin's premier exterior cleaning company. 6+ years of experience, 500+ projects completed, licensed and insured.",
+    "Learn about GT Site Solutions, Austin's premier exterior cleaning company. 3+ years of experience, 500+ projects completed, licensed and insured.",
 }
 
 export default function Company() {

@@ -12,7 +12,7 @@ import { PlusGrid, PlusGridItem, PlusGridRow } from './plus-grid'
 const links = [
   { href: '/#contact', label: 'Contact' },
   { href: '/company', label: 'Company' },
-  { href: '/blog', label: 'Blog' },
+  { href: '/careers', label: 'Careers' },
   { href: 'https://calendly.com/your-link', label: 'Book' },
 ]
 
@@ -93,6 +93,13 @@ export function Navbar({ banner }: { banner?: React.ReactNode }) {
     setIsScrolled(latest > 50)
   })
 
+  const closeMenu = () => {
+    const button = document.querySelector(
+      '[aria-label="Open main menu"]',
+    ) as HTMLButtonElement
+    if (button) button.click()
+  }
+
   const openCalPopup = (e: React.MouseEvent) => {
     e.preventDefault()
     // Open Calendly popup widget
@@ -104,6 +111,8 @@ export function Navbar({ banner }: { banner?: React.ReactNode }) {
       // Fallback to opening in new tab if Calendly isn't loaded
       window.open('https://calendly.com/dounia-gtsitesolutions', '_blank')
     }
+    // Close mobile menu if open
+    closeMenu()
   }
 
   return (
@@ -180,12 +189,7 @@ export function Navbar({ banner }: { banner?: React.ReactNode }) {
               <div className="fixed inset-0 z-[9999] bg-black/90 backdrop-blur-xl lg:hidden">
                 {/* Close button */}
                 <button
-                  onClick={() => {
-                    const button = document.querySelector(
-                      '[aria-label="Open main menu"]',
-                    ) as HTMLButtonElement
-                    if (button) button.click()
-                  }}
+                  onClick={closeMenu}
                   className="absolute top-8 right-8 z-50 p-2 text-white transition-colors hover:text-gray-300"
                   aria-label="Close menu"
                 >
@@ -226,6 +230,7 @@ export function Navbar({ banner }: { banner?: React.ReactNode }) {
                       ) : (
                         <Link
                           href={href}
+                          onClick={closeMenu}
                           className="text-2xl font-medium text-white transition-colors duration-300 hover:text-gray-300"
                         >
                           {label}

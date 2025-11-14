@@ -53,18 +53,18 @@ export function Footer() {
                 </p>
                 <div className="space-y-3">
                   <a
-                    href="tel:5126897606"
+                    href="tel:5127483225"
                     className="flex items-center gap-2 text-gray-300 transition hover:text-yellow-400"
                   >
                     <Phone className="h-4 w-4" />
-                    (512) 689-7606
+                    (512) 748-3225
                   </a>
                   <a
-                    href="mailto:Dounia@gtsitesolutions.com"
+                    href="mailto:Ruben@gtsitesolutions.com"
                     className="flex items-center gap-2 text-gray-300 transition hover:text-yellow-400"
                   >
                     <Mail className="h-4 w-4" />
-                    Dounia@gtsitesolutions.com
+                    Ruben@gtsitesolutions.com
                   </a>
                   <div className="flex items-start gap-2 text-gray-300">
                     <MapPin className="mt-1 h-4 w-4" />
@@ -147,7 +147,7 @@ export function Footer() {
                   reserved.
                 </p>
                 <p className="mt-1 text-xs text-gray-500">
-                  Dounia Mohad - CMO | Business Development
+                  Ruben - CEO | Owner
                 </p>
               </div>
 

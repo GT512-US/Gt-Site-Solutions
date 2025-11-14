@@ -14,7 +14,7 @@ const projects = [
     location: 'Austin, TX',
     date: 'Ongoing Contract',
     // Only after image - no before
-    afterImage: '/before-after/BenzAfter.jpeg',
+    afterImage: '/before-after/BenzAfter.png',
     description:
       'Complete exterior cleaning, showroom windows, and monthly pressure washing maintenance',
     services: ['Pressure Washing', 'Window Cleaning', 'Monthly Maintenance'],
@@ -49,14 +49,14 @@ const projects = [
   {
     id: 4,
     category: 'commercial',
-    title: 'Historic Building Restoration',
-    location: 'Downtown Austin',
+    title: 'Baylor Campus Housing Building',
+    location: 'Baylor University, Waco, TX',
     date: 'January 2024',
     // Only after image - no before
     afterImage: '/before-after/HistoricBuilding.jpeg',
     description:
-      'Delicate exterior cleaning and restoration for historic downtown building',
-    services: ['Soft Washing', 'Facade Restoration', 'Historic Preservation'],
+      'Complete exterior cleaning and maintenance for campus housing building at Baylor University',
+    services: ['Pressure Washing', 'Facade Cleaning', 'Campus Maintenance'],
   },
   {
     id: 5,
@@ -194,19 +194,19 @@ export function Portfolio() {
                           afterImage={featuredProject.afterImage}
                           className="rounded-lg shadow-xl"
                         />
-                      ) : (
+                      ) : (featuredProject.afterImage || featuredProject.beforeImage) ? (
                         <div className="relative h-80 w-full overflow-hidden rounded-lg shadow-xl">
                           <Image
                             src={
-                              featuredProject.afterImage ||
-                              featuredProject.beforeImage
+                              (featuredProject.afterImage ||
+                              featuredProject.beforeImage) as string
                             }
                             alt={featuredProject.title}
                             fill
                             className="object-cover"
                           />
                         </div>
-                      )}
+                      ) : null}
                     </div>
                   </div>
                 </div>
@@ -228,16 +228,16 @@ export function Portfolio() {
                       afterImage={project.afterImage}
                       className="h-80 w-full"
                     />
-                  ) : (
+                  ) : (project.afterImage || project.beforeImage) ? (
                     <div className="relative h-80 w-full overflow-hidden">
                       <Image
-                        src={project.afterImage || project.beforeImage}
+                        src={(project.afterImage || project.beforeImage) as string}
                         alt={project.title}
                         fill
                         className="object-cover"
                       />
                     </div>
-                  )}
+                  ) : null}
                   <div className="absolute top-4 left-4">
                     <span className="rounded-full bg-white/90 px-3 py-1 text-sm font-semibold text-gray-900 backdrop-blur-sm">
                       {project.category.charAt(0).toUpperCase() +

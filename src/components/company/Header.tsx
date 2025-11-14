@@ -27,7 +27,7 @@ export function Header() {
           <div className="inline-flex items-center gap-3 rounded-full border border-accent/30 bg-accent/20 px-4 py-2 backdrop-blur-sm">
             <Shield className="h-5 w-5 text-accent" />
             <span className="text-sm font-semibold text-accent">
-              Licensed & Insured • 6+ Years
+              Licensed & Insured • 3+ Years
             </span>
           </div>
           <Heading as="h1" className="mt-6 text-white">

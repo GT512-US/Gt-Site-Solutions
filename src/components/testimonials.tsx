@@ -14,58 +14,46 @@ import { useState } from 'react'
 const testimonials = [
   {
     id: 1,
-    name: 'Michael Rodriguez',
-    title: 'Mercedes-Benz AMG Dealership Manager',
-    company: 'Commercial Client',
-    text: 'GT Site Solutions has been our exclusive exterior cleaning partner for over 3 years. Their attention to detail and professionalism matches the high standards we maintain for Mercedes-Benz. The monthly maintenance program keeps our dealership looking pristine.',
+    name: 'John P.',
+    text: 'GT Exterior Services LLC are absolutely the BEST! GT was fast and professional and went beyond their proposal to make our pavement look brand new. I recommend GT to both residential and commercial entities.',
     rating: 5,
     type: 'commercial',
     featured: true,
   },
   {
     id: 2,
-    name: 'Sarah Johnson',
-    title: 'Property Manager',
-    company: 'Domain Northside',
-    text: "We've used GT for multiple properties over the years. They're reliable, professional, and always deliver exceptional results. Their construction cleanup services are the best in Austin.",
+    name: 'Lauryn H.',
+    text: "GT Exterior Services did an amazing job with our window cleaning and graffiti removal! My family runs a locally owned business and wanted to make sure our storefront looked its best. The team was super friendly and professional, and they really knew what they were doing. They used some kind of magic solution that left our windows looking crystal clear, and they got rid of the graffiti like it was never there. We were really impressed with their commitment to quality and their attention to detail. Overall, we would highly recommend GT Exterior Services to anyone looking for top-tier exterior cleaning services. They're the best!",
     rating: 5,
     type: 'commercial',
   },
   {
     id: 3,
-    name: 'David Chen',
-    title: 'Homeowner',
-    company: 'Westlake Hills',
-    text: 'The transformation of our home was incredible! The team was courteous, efficient, and the results exceeded our expectations. Our driveway and exterior look brand new.',
+    name: 'Phil C.',
+    text: "We've had GT Exterior Services pressure wash our exterior surfaces. They did an excellent job! They are competent, professional, and friendly. We highly recommend them! You can't go wrong by calling them!",
     rating: 5,
     type: 'residential',
   },
   {
     id: 4,
-    name: 'Jennifer Martinez',
-    title: 'Restaurant Owner',
-    company: 'South Congress',
-    text: 'GT Site Solutions saved us during our grand opening. They completed a thorough post-construction clean that had our restaurant sparkling. Quick response and fantastic service!',
+    name: 'Mary G.',
+    text: 'GT Exterior Services cleaned the limestone chimney, exterior walls and walkway of my house. They look SO MUCH BETTER! The price was fair and the guys were very professional. I will definitely use them again!',
     rating: 5,
-    type: 'commercial',
+    type: 'residential',
   },
   {
     id: 5,
-    name: 'Robert Thompson',
-    title: 'General Contractor',
-    company: 'Thompson Construction',
-    text: 'As a contractor, I only work with the best. GT Site Solutions is my go-to for all construction cleanups. They understand deadlines and always deliver on time.',
+    name: 'Dylan C.',
+    text: "GT Exterior Services delivered outstanding window cleaning, building wash, and surface cleaning services for our commercial property. The windows are now streak-free, offering a perfect, unobstructed view. The building exterior has been revitalized with their thorough wash, presenting our property at its absolute best. Surfaces around the property, including walkways and entry areas, were meticulously cleaned, enhancing overall safety and visual appeal. The team's professionalism and efficiency are commendable. We're thoroughly impressed and recommend GT Exterior Services for any business in need of top-quality exterior cleaning. 5 stars for a job well done!",
     rating: 5,
     type: 'commercial',
   },
   {
     id: 6,
-    name: 'Lisa Anderson',
-    title: 'HOA President',
-    company: 'Circle C Ranch',
-    text: 'We hired GT for our community center and pool area pressure washing. The results were outstanding and the price was very competitive. Highly recommend!',
+    name: 'Reid',
+    text: 'Ruben and his team were extremely knowledgeable, professional, and most importantly, Got The Job Done Right!! I would absolutely recommend their services to family and friends. Ruben and Jordan were a a pleasure to work with!',
     rating: 5,
-    type: 'residential',
+    type: 'commercial',
   },
 ]
 
@@ -126,7 +114,6 @@ export function Testimonials() {
                       <p className="text-xl font-bold text-white">
                         {testimonials[0].name}
                       </p>
-                      <p className="text-yellow-400">{testimonials[0].title}</p>
                     </div>
                     <div className="flex text-yellow-400">
                       {[...Array(5)].map((_, i) => (
@@ -177,12 +164,6 @@ export function Testimonials() {
                 <p className="font-bold text-gray-900">
                   {activeTestimonial.name}
                 </p>
-                <p className="text-sm text-gray-600">
-                  {activeTestimonial.title}
-                </p>
-                <p className="text-sm text-gray-500">
-                  {activeTestimonial.company}
-                </p>
               </div>
 
               <div className="flex items-center gap-2">
@@ -221,7 +202,7 @@ export function Testimonials() {
               <div className="text-sm text-gray-600">Happy Customers</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-black text-gray-900">4.9/5</div>
+              <div className="text-3xl font-black text-gray-900">5/5</div>
               <div className="text-sm text-gray-600">Average Rating</div>
             </div>
             <div className="text-center">
@@ -229,7 +210,7 @@ export function Testimonials() {
               <div className="text-sm text-gray-600">Satisfaction Rate</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-black text-gray-900">6+</div>
+              <div className="text-3xl font-black text-gray-900">3+</div>
               <div className="text-sm text-gray-600">Years Trusted</div>
             </div>
           </div>

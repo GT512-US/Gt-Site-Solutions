@@ -24,28 +24,51 @@ export function Contact() {
 
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [error, setError] = useState('')
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setError('')
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-
-    // Reset after 5 seconds
-    setTimeout(() => {
-      setIsSubmitted(false)
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        service: '',
-        message: '',
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       })
-    }, 5000)
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message')
+      }
+
+      setIsSubmitting(false)
+      setIsSubmitted(true)
+
+      // Reset after 5 seconds
+      setTimeout(() => {
+        setIsSubmitted(false)
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          service: '',
+          message: '',
+        })
+      }, 5000)
+    } catch (err) {
+      setIsSubmitting(false)
+      setError(
+        err instanceof Error
+          ? err.message
+          : 'Failed to send message. Please try again.',
+      )
+      console.error('Error submitting form:', err)
+    }
   }
 
   const handleChange = (
@@ -190,7 +213,7 @@ export function Contact() {
                     </div>
                     <div className="text-center">
                       <div className="text-2xl font-bold text-yellow-400">
-                        6+
+                        3+
                       </div>
                       <div className="text-xs text-gray-400">Years</div>
                     </div>
@@ -322,6 +345,12 @@ export function Contact() {
                     />
                   </div>
                 </div>
+
+                {error && (
+                  <div className="rounded-lg border border-red-200 bg-red-50 p-4">
+                    <p className="text-sm text-red-600">{error}</p>
+                  </div>
+                )}
 
                 <button
                   type="submit"

@@ -24,7 +24,7 @@ export async function GET(req: Request) {
     },
   })
 
-  let { data: posts } = await getPostsForFeed()
+  let posts = await getPostsForFeed()
 
   posts.forEach((post) => {
     try {
@@ -42,13 +42,7 @@ export async function GET(req: Request) {
       id: post.slug,
       link: `${siteUrl}/blog/${post.slug}`,
       content: post.excerpt,
-      image: post.mainImage
-        ? image(post.mainImage)
-            .size(1200, 800)
-            .format('jpg')
-            .url()
-            .replaceAll('&', '&amp;')
-        : undefined,
+      image: undefined, // Image processing disabled for now
       author: post.author?.name ? [{ name: post.author.name }] : [],
       contributor: post.author?.name ? [{ name: post.author.name }] : [],
       date: new Date(post.publishedAt),

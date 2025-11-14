@@ -11,23 +11,27 @@ export function ContactSection() {
           Ready to transform your property?
         </Heading>
         <Lead className="mt-6 max-w-3xl text-white/70">
-          Contact us today for a free, no-obligation estimate. We're here to answer
-          your questions and help you find the perfect cleaning solution for your property.
+          Contact us today for a free, no-obligation estimate. We're here to
+          answer your questions and help you find the perfect cleaning solution
+          for your property.
         </Lead>
         <div className="mt-24 grid grid-cols-1 gap-16 lg:grid-cols-[1fr_24rem]">
           <div className="lg:max-w-2xl">
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
-              <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm">
+              <div className="rounded-lg bg-white/5 p-6 backdrop-blur-sm">
                 <h4 className="text-base font-semibold text-white">Phone</h4>
                 <p className="mt-2 text-sm/6 text-white/70">
-                  Call us for immediate assistance or to schedule a consultation.
+                  Call us for immediate assistance or to schedule a
+                  consultation.
                 </p>
                 <p className="mt-4 text-lg font-semibold text-yellow-400">
-                  <a href="tel:(512)689-7606">(512) 689-7606</a>
+                  <a href="tel:(512)748-3225">(512) 748-3225</a>
                 </p>
               </div>
-              <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm">
-                <h4 className="text-base font-semibold text-white">Service Area</h4>
+              <div className="rounded-lg bg-white/5 p-6 backdrop-blur-sm">
+                <h4 className="text-base font-semibold text-white">
+                  Service Area
+                </h4>
                 <p className="mt-2 text-sm/6 text-white/70">
                   Proudly serving Austin and surrounding areas.
                 </p>
@@ -35,8 +39,10 @@ export function ContactSection() {
                   Austin, TX & 30-mile radius
                 </p>
               </div>
-              <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm">
-                <h4 className="text-base font-semibold text-white">Business Hours</h4>
+              <div className="rounded-lg bg-white/5 p-6 backdrop-blur-sm">
+                <h4 className="text-base font-semibold text-white">
+                  Business Hours
+                </h4>
                 <p className="mt-2 text-sm/6 text-white/70">
                   Monday - Saturday: 7:00 AM - 6:00 PM
                 </p>
@@ -44,8 +50,10 @@ export function ContactSection() {
                   Sunday: Emergency services only
                 </p>
               </div>
-              <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm">
-                <h4 className="text-base font-semibold text-white">Response Time</h4>
+              <div className="rounded-lg bg-white/5 p-6 backdrop-blur-sm">
+                <h4 className="text-base font-semibold text-white">
+                  Response Time
+                </h4>
                 <p className="mt-2 text-sm/6 text-white/70">
                   We typically respond to inquiries within 24 hours.
                 </p>

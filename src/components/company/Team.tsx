@@ -76,8 +76,8 @@ export function Team() {
             description="Complete gutter cleaning and inspection to protect your property from water damage"
           />
           <ServiceItem
-            name="Deck Restoration"
-            description="Deep cleaning and restoration services to bring your deck back to life"
+            name="Interior Cleaning"
+            description="Comprehensive interior cleaning services to keep your spaces spotless and professional"
           />
           <ServiceItem
             name="Emergency Services"

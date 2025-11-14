@@ -28,7 +28,7 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto mb-5 max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Navigation space */}
         <div className="h-20" />
 
@@ -42,7 +42,7 @@ export function Hero() {
                 <div className="inline-flex items-center gap-3 rounded-full border border-accent/30 bg-accent/20 px-4 py-2 backdrop-blur-sm">
                   <Shield className="h-5 w-5 text-accent" />
                   <span className="text-sm font-semibold text-accent">
-                    Licensed & Insured • 6+ Years
+                    Licensed & Insured • 3+ Years
                   </span>
                 </div>
 
