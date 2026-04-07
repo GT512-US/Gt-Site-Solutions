@@ -1,90 +1,58 @@
-import { Button } from '@/components/button'
-import { Container } from '@/components/container'
-import { Heading, Lead, Subheading } from '@/components/text'
-import { ServiceItem } from './ServiceItem'
-
 export function Team() {
   return (
-    <div className="bg-neutral-900 py-20 sm:py-32">
-      <Container>
-        <Subheading>Meet the team</Subheading>
-        <Heading as="h3" className="mt-2 text-white">
-          Professional, experienced, and reliable.
-        </Heading>
-        <Lead className="mt-6 max-w-3xl text-white/70">
-          GT Site Solutions is built on a foundation of skilled professionals
-          who take pride in delivering exceptional results for every client.
-        </Lead>
-        <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-2">
-          <div className="flex h-full max-w-lg flex-col justify-between">
-            <div>
-              <p className="text-base/7 text-white/70">
-                At GT Site Solutions, our mission is simple: to bring clarity,
-                care, and craftsmanship to every project. We take pride in
-                transforming worksites into safe, spotless, and professional
-                spaces. We believe details matter. With a friendly team,
-                reliable service, and a polished finish, we partner with
-                contractors and builders to deliver sites that feel as good as
-                they look. Excellence delivered, every time.
-              </p>
-              <p className="mt-8 text-base/7 text-white/70">
-                Today, our experienced team combines state-of-the-art equipment
-                with time-tested techniques to deliver results that protect your
-                investment and enhance your property's value. We're fully
-                licensed, insured, and committed to environmental responsibility
-                in all our cleaning processes.
-              </p>
-            </div>
-            <div className="mt-8">
-              <Button className="w-full sm:w-auto" asChild>
-                <a href="tel:(512)689-7606">Call (512) 689-7606</a>
-              </Button>
+    <section className="bg-[#f5f3ef] py-20 lg:py-28">
+      <div className="mx-auto max-w-7xl px-6 lg:px-20">
+        <div className="mb-12 flex flex-col gap-3">
+          <span className="font-sans inline-block w-fit bg-[#0f0f0f] px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.1em] text-[#facc15]">
+            Our Story
+          </span>
+          <h2 className="font-display text-[52px] font-bold uppercase leading-[0.9] tracking-tight text-[#0f0f0f] lg:text-[72px]">
+            Professional<br />
+            <span className="text-[#facc15]">Cleaning &amp; Site</span><br />
+            Solutions
+          </h2>
+        </div>
+
+        <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
+          <div className="flex flex-col gap-5">
+            <p className="font-sans text-[16px] leading-relaxed text-[#555]">
+              GT Site Solutions is a professional cleaning and site services company dedicated to
+              helping homes, businesses, and construction projects maintain clean, safe, and
+              professional environments. We specialize in pressure washing, window cleaning,
+              parking lot cleaning, parking lot striping, and construction site cleanup for both
+              residential and commercial clients.
+            </p>
+            <p className="font-sans text-[16px] leading-relaxed text-[#555]">
+              Our goal is simple: deliver reliable service and exceptional results on every project.
+              Whether we're restoring the appearance of a home, maintaining a commercial property,
+              or preparing a construction site for completion, our team approaches every job with
+              professionalism, attention to detail, and pride in our work.
+            </p>
+            <div className="mt-2 flex flex-col gap-3 sm:flex-row">
+              <a
+                href="tel:5127483225"
+                className="font-display inline-flex items-center justify-center bg-[#facc15] px-6 py-3.5 text-[14px] font-bold uppercase tracking-[0.06em] text-[#0f0f0f] transition-opacity hover:opacity-90"
+              >
+                Call (512) 748-3225
+              </a>
+              <a
+                href="mailto:Ruben@gtsitesolutions.com"
+                className="font-display inline-flex items-center justify-center border border-[#0f0f0f]/25 px-6 py-3.5 text-[14px] font-semibold uppercase tracking-[0.06em] text-[#0f0f0f] transition-colors hover:border-[#0f0f0f]/50"
+              >
+                Email Ruben
+              </a>
             </div>
           </div>
-          <div className="flex justify-center max-lg:order-first">
-            <div className="overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
-              <img
-                src="/before-after/Working.jpg"
-                alt="GT Site Solutions team at work"
-                className="h-auto max-h-[50rem] object-contain"
-              />
-            </div>
+
+          <div className="overflow-hidden">
+            <img
+              src="/before-after/Working.jpg"
+              alt="GT Site Solutions team at work"
+              className="h-full w-full object-cover"
+            />
           </div>
         </div>
-        <Subheading as="h3" className="mt-24">
-          Our services
-        </Subheading>
-        <hr className="mt-6 border-t border-white/10" />
-        <ul
-          role="list"
-          className="mx-auto mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
-        >
-          <ServiceItem
-            name="Pressure Washing"
-            description="Professional high-pressure cleaning for driveways, sidewalks, decks, and building exteriors"
-          />
-          <ServiceItem
-            name="Window Cleaning"
-            description="Interior and exterior window cleaning for crystal-clear views and enhanced curb appeal"
-          />
-          <ServiceItem
-            name="Construction Cleanup"
-            description="Post-construction cleaning to remove debris, dust, and construction residue"
-          />
-          <ServiceItem
-            name="Gutter Cleaning"
-            description="Complete gutter cleaning and inspection to protect your property from water damage"
-          />
-          <ServiceItem
-            name="Interior Cleaning"
-            description="Comprehensive interior cleaning services to keep your spaces spotless and professional"
-          />
-          <ServiceItem
-            name="Emergency Services"
-            description="24/7 emergency cleaning services for storm damage and urgent situations"
-          />
-        </ul>
-      </Container>
-    </div>
+      </div>
+    </section>
   )
 }

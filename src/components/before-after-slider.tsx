@@ -63,7 +63,7 @@ export function BeforeAfterSlider({
   return (
     <div
       ref={containerRef}
-      className={`group relative aspect-[4/3] overflow-hidden rounded-xl shadow-2xl ${className}`}
+      className={`group relative aspect-[4/3] overflow-hidden ${className}`}
       onMouseMove={handleMouseMove}
       onTouchMove={handleTouchMove}
     >

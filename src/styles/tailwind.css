@@ -1,41 +1,24 @@
 @import 'tailwindcss';
 
 @theme {
-  --font-sans: Switzer, system-ui, sans-serif;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-display: 'Oswald', system-ui, sans-serif;
 
   --radius-4xl: 2rem;
 
-  /* Color Palette - White, Black, Orange/Yellow Theme */
-  --color-primary: #000000;
-  --color-primary-foreground: #ffffff;
-  --color-secondary: #f8f9fa;
-  --color-secondary-foreground: #000000;
-  --color-accent: #f59e0b;
-  --color-accent-foreground: #000000;
-  --color-destructive: #ef4444;
-  --color-destructive-foreground: #ffffff;
-  --color-muted: #f1f5f9;
-  --color-muted-foreground: #64748b;
+  /* GT Site Solutions Brand Colors */
+  --color-brand: #facc15;
+  --color-brand-foreground: #0f0f0f;
+  --color-site-black: #0f0f0f;
+  --color-site-warm: #f5f3ef;
+  --color-site-gap: #d6d3cd;
+
+  /* Base */
   --color-background: #ffffff;
-  --color-foreground: #000000;
-  --color-input: #e2e8f0;
-  --color-ring: #f59e0b;
-
-  /* Hero-specific colors */
-  --color-hero-primary: #000000;
-  --color-hero-primary-foreground: #ffffff;
-  --color-hero-secondary: #f8f9fa;
-  --color-hero-muted: #f1f5f9;
-  --color-hero-muted-foreground: #64748b;
-  --color-hero-accent: #f59e0b;
-  --color-hero-accent-foreground: #000000;
-  --color-hero-warning: #f59e0b;
-  --color-hero-success: #10b981;
-  --color-hero-destructive: #ef4444;
-
-  /* Gradient definitions */
-  --gradient-accent: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
-  --gradient-hero: linear-gradient(135deg, #000000 0%, #374151 100%);
+  --color-foreground: #0f0f0f;
+  --color-muted: #f5f3ef;
+  --color-muted-foreground: #666666;
+  --color-ring: #facc15;
 }
 
 @keyframes move-x {

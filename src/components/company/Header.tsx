@@ -1,75 +1,64 @@
+'use client'
+
 import { AnimatedNumber } from '@/components/animated-number'
-import { Container } from '@/components/container'
-import { Heading, Lead } from '@/components/text'
-import { Shield } from 'lucide-react'
+
+const stats = [
+  { value: '3+', label: 'Years in Business', animated: false },
+  { value: '500+', label: 'Projects Completed', animated: false },
+  { value: '100%', label: 'Satisfaction Rate', animated: false },
+  { value: '24hr', label: 'Response Time', animated: false },
+]
 
 export function Header() {
   return (
-    <div className="relative overflow-hidden pt-24 sm:pt-32">
-      {/* Background with modern overlay */}
-      <div className="absolute inset-0 bg-neutral-800">
+    <div className="relative bg-[#0f0f0f] pt-32 pb-0">
+      {/* Background image */}
+      <div className="absolute inset-0">
         <img
           src="/linked-avatars/hero-bg.png"
-          alt="Hero background"
-          className="h-full w-full object-cover"
+          alt=""
+          className="h-full w-full object-cover opacity-20"
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0f0f0f]" />
       </div>
 
-      {/* Geometric background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-32 -right-32 h-96 w-96 rounded-full bg-accent/10 blur-3xl" />
-        <div className="absolute top-1/2 -left-32 h-64 w-64 rounded-full bg-accent/10 blur-2xl" />
+      <div className="relative mx-auto max-w-7xl px-6 lg:px-20">
+        {/* Eyebrow */}
+        <span className="font-sans inline-block bg-[#facc15] px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.1em] text-[#0f0f0f]">
+          About Us
+        </span>
+
+        {/* Heading */}
+        <h1 className="font-display mt-4 text-[52px] font-bold uppercase leading-[0.9] tracking-tight text-white lg:text-[80px]">
+          About GT<br />
+          <span className="text-[#facc15]">Site Solutions</span>
+        </h1>
+
+        <p className="font-sans mt-6 max-w-xl text-[17px] leading-relaxed text-white/55">
+          A professional cleaning and site services company dedicated to helping
+          homes, businesses, and construction projects maintain clean, safe, and
+          professional environments.
+        </p>
+
+        {/* Stats bar */}
+        <div className="mt-16 grid grid-cols-2 gap-[1px] bg-[#ffffff08] lg:grid-cols-4">
+          {[
+            { val: '3+', label: 'Years in Business' },
+            { val: '500+', label: 'Projects Completed' },
+            { val: '100%', label: 'Satisfaction Rate' },
+            { val: '24hr', label: 'Response Time' },
+          ].map((s) => (
+            <div key={s.label} className="bg-[#0f0f0f] px-6 py-7 text-center">
+              <div className="font-display mb-1 text-[40px] font-bold leading-none text-[#facc15]">
+                {s.val}
+              </div>
+              <div className="font-sans text-[11px] font-semibold uppercase tracking-[0.08em] text-white/40">
+                {s.label}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-
-      <Container className="relative">
-        <div className="mx-auto max-w-3xl text-center">
-          <div className="inline-flex items-center gap-3 rounded-full border border-accent/30 bg-accent/20 px-4 py-2 backdrop-blur-sm">
-            <Shield className="h-5 w-5 text-accent" />
-            <span className="text-sm font-semibold text-accent">
-              Licensed & Insured • 3+ Years
-            </span>
-          </div>
-          <Heading as="h1" className="mt-6 text-white">
-            About GT Site Solutions
-          </Heading>
-          <Lead className="mt-6 text-white/90">
-            We are a team of dedicated professionals committed to providing the
-            best exterior cleaning services in Austin, TX. Our mission is to
-            deliver exceptional quality and value to our clients.
-          </Lead>
-        </div>
-
-        <div className="mt-20 mb-10">
-          <dl className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            <div className="flex flex-col items-center rounded-lg bg-white/5 p-6 text-center backdrop-blur-sm">
-              <dt className="text-sm/6 text-white/70">Years in Business</dt>
-              <dd className="order-first text-5xl font-bold tracking-tight text-white">
-                <AnimatedNumber start={4} end={6} />+
-              </dd>
-            </div>
-            <div className="flex flex-col items-center rounded-lg bg-white/5 p-6 text-center backdrop-blur-sm">
-              <dt className="text-sm/6 text-white/70">Projects Completed</dt>
-              <dd className="order-first text-5xl font-bold tracking-tight text-white">
-                <AnimatedNumber start={300} end={500} />+
-              </dd>
-            </div>
-            <div className="flex flex-col items-center rounded-lg bg-white/5 p-6 text-center backdrop-blur-sm">
-              <dt className="text-sm/6 text-white/70">Satisfaction Rate</dt>
-              <dd className="order-first text-5xl font-bold tracking-tight text-white">
-                <AnimatedNumber start={95} end={100} />%
-              </dd>
-            </div>
-            <div className="flex flex-col items-center rounded-lg bg-white/5 p-6 text-center backdrop-blur-sm">
-              <dt className="text-sm/6 text-white/70">Response Time</dt>
-              <dd className="order-first text-5xl font-bold tracking-tight text-white">
-                <AnimatedNumber start={12} end={24} />
-                hr
-              </dd>
-            </div>
-          </dl>
-        </div>
-      </Container>
     </div>
   )
 }

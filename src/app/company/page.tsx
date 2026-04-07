@@ -15,15 +15,13 @@ export const metadata: Metadata = {
 export default function Company() {
   return (
     <main className="overflow-hidden">
-      <Header />
       <div className="relative z-10">
         <Navbar />
       </div>
-      <div className="bg-neutral-900 px-20">
-        <Team />
-        <WhyChooseUs />
-        <ContactSection />
-      </div>
+      <Header />
+      <Team />
+      <WhyChooseUs />
+      <ContactSection />
       <Footer />
     </main>
   )

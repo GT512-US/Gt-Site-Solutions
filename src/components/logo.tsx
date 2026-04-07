@@ -3,9 +3,9 @@
 export function Logo({ className }: { className?: string }) {
   return (
     <svg
-      width="113"
+      width="98"
       height="51"
-      viewBox="0 0 565 255"
+      viewBox="0 0 490 255"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
