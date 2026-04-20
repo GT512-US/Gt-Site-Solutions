@@ -9,7 +9,7 @@ const inView = (delay = 0) => ({
   initial: { opacity: 0, y: 24 },
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true, margin: '-60px' },
-  transition: { duration: 0.55, ease: 'easeOut', delay },
+  transition: { duration: 0.55, ease: 'easeOut' as const, delay },
 })
 
 const projects = [
@@ -82,6 +82,84 @@ const projects = [
     description:
       'Complete exterior cleaning for modern residential home including pressure washing and window cleaning',
     services: ['Pressure Washing', 'Window Cleaning', 'Exterior Soft Wash'],
+    wide: true,
+  },
+  {
+    id: 7,
+    category: 'commercial',
+    title: 'Sidewalk & Walkway Cleaning',
+    location: 'Austin, TX',
+    date: 'March 2025',
+    afterImage: '/before-after/3D90B1D5-7FA2-4804-8EB2-B116E6E733CD.png',
+    description: 'Concrete sidewalk pressure washing removing built-up grime and discoloration.',
+    services: ['Pressure Washing', 'Surface Cleaning'],
+    composite: true,
+  },
+  {
+    id: 8,
+    category: 'commercial',
+    title: 'Commercial Parking Lot Cleaning',
+    location: 'Austin, TX',
+    date: 'March 2025',
+    afterImage: '/before-after/15A7F180-1CD4-4533-8763-ABEEEAA90A11.png',
+    description: 'Full commercial parking lot and loading area pressure washing restoration.',
+    services: ['Pressure Washing', 'Parking Lot Cleaning'],
+    composite: true,
+  },
+  {
+    id: 9,
+    category: 'commercial',
+    title: 'Parking Garage Floor Cleaning',
+    location: 'Austin, TX',
+    date: 'March 2025',
+    afterImage: '/before-after/42E3A0D6-020A-4E09-8AC4-58C74F76FD13.png',
+    description: 'Deep cleaning of multi-level parking garage floors removing oil and grime.',
+    services: ['Pressure Washing', 'Concrete Cleaning'],
+    composite: true,
+  },
+  {
+    id: 10,
+    category: 'residential',
+    title: 'Stepping Stone Pathway Restoration',
+    location: 'Austin, TX',
+    date: 'March 2025',
+    afterImage: '/before-after/2738C768-BD3D-4EC5-A19C-54D0394BC216.png',
+    description: 'Residential pathway cleaning restoring stepping stones to like-new condition.',
+    services: ['Pressure Washing', 'Surface Cleaning'],
+    composite: true,
+  },
+  {
+    id: 11,
+    category: 'commercial',
+    title: 'Commercial Glass & Window Cleaning',
+    location: 'Austin, TX',
+    date: 'April 2025',
+    afterImage: '/before-after/86749437-B50D-433A-A5C3-414191E14952.png',
+    description: 'Streak-free commercial glass and storefront window cleaning.',
+    services: ['Window Cleaning', 'Glass Restoration'],
+    composite: true,
+  },
+  {
+    id: 14,
+    category: 'commercial',
+    title: 'Graffiti Removal',
+    location: 'Austin, TX',
+    date: 'April 2025',
+    afterImage: '/before-after/A787F809-5D7A-46BF-A68C-3162D35CDEC9.png',
+    description: 'Complete graffiti removal from concrete drainage infrastructure.',
+    services: ['Pressure Washing', 'Graffiti Removal'],
+    composite: true,
+  },
+  {
+    id: 15,
+    category: 'commercial',
+    title: 'Exterior Window Cleaning',
+    location: 'Austin, TX',
+    date: 'April 2025',
+    afterImage: '/before-after/A4437A92-BA5B-4D46-B5CA-490F6060A49B.png',
+    description: 'Multi-pane exterior window cleaning delivering crystal clear results.',
+    services: ['Window Cleaning', 'Facade Cleaning'],
+    composite: true,
   },
 ]
 
@@ -108,17 +186,17 @@ export function Portfolio() {
         {/* Header */}
         <motion.div className="mb-12 flex flex-col gap-4 lg:mb-16 lg:flex-row lg:items-end lg:justify-between" {...inView()}>
           <div className="flex flex-col gap-3">
-            <span className="font-sans inline-block w-fit bg-[#0f0f0f] px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.1em] text-[#facc15]">
+            <span className="font-sans inline-block w-fit bg-[#0f0f0f] px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.1em] text-[#3b82f6]">
               OUR WORK
             </span>
             <h2 className="font-display text-[56px] font-bold uppercase leading-[0.92] tracking-tight text-[#0f0f0f] lg:text-[72px]">
               See The<br />
-              <span className="text-[#facc15]">Transformation</span>
+              <span className="text-[#3b82f6]">Transformation</span>
             </h2>
           </div>
           <p className="font-sans max-w-[420px] text-[17px] leading-relaxed text-[#555] lg:pb-2">
-            Drag the slider to reveal the difference. Austin's premier
-            businesses trust GT Site Solutions for dramatic, lasting results.
+            Real results from real jobs across Austin and surrounding areas.
+            Every photo shows the GT Site Solutions difference.
           </p>
         </motion.div>
 
@@ -130,7 +208,7 @@ export function Portfolio() {
               onClick={() => setSelectedCategory(cat.id)}
               className={`font-display px-5 py-2.5 text-[13px] font-bold uppercase tracking-[0.06em] transition-colors ${
                 selectedCategory === cat.id
-                  ? 'bg-[#facc15] text-[#0f0f0f]'
+                  ? 'bg-[#3b82f6] text-white'
                   : 'bg-[#0f0f0f] text-white hover:bg-[#1a1a1a]'
               }`}
             >
@@ -142,12 +220,12 @@ export function Portfolio() {
         {/* Featured project */}
         <motion.div className="mb-[2px] bg-[#0f0f0f] lg:mb-16" {...inView(0.1)}>
           {/* Yellow strip */}
-          <div className="flex items-center justify-between bg-[#facc15] px-8 py-3.5">
+          <div className="flex items-center justify-between bg-[#3b82f6] px-8 py-3.5">
             <span className="font-sans text-[11px] font-bold uppercase tracking-[0.12em] text-[#0f0f0f]">
               ★ FEATURED PROJECT
             </span>
             <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.08em] text-[#0f0f0f]">
-              {featuredProject.date ? `${featuredProject.date} · ` : ''}{featuredProject.location}
+              {featuredProject.location}
             </span>
           </div>
           <div className="flex flex-col lg:grid lg:grid-cols-2">
@@ -187,7 +265,7 @@ export function Portfolio() {
                 ))}
               </div>
               {featuredProject.testimonial && (
-                <blockquote className="font-sans border-l-2 border-[#facc15] pl-4 text-[13px] italic leading-relaxed text-white/50">
+                <blockquote className="font-sans border-l-2 border-[#3b82f6] pl-4 text-[13px] italic leading-relaxed text-white/50">
                   "{featuredProject.testimonial}"
                 </blockquote>
               )}
@@ -198,15 +276,8 @@ export function Portfolio() {
         {/* Projects grid */}
         <div className="grid gap-[2px] bg-[#d6d3cd] md:grid-cols-2 lg:grid-cols-3">
           {filteredProjects.map((project, index) => {
-            const total = filteredProjects.length
-            const remainder = total % 3
-            const isLast = index === total - 1
-            const spanClass = isLast && remainder === 1
-              ? 'lg:col-span-3'
-              : isLast && remainder === 2
-              ? 'lg:col-span-2'
-              : ''
-            const isWide = isLast && remainder === 2
+            const isWide = !!project.wide
+            const spanClass = isWide ? 'lg:col-span-2' : ''
             return (
             <motion.div
               key={project.id}
@@ -214,19 +285,18 @@ export function Portfolio() {
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-40px' }}
-              transition={{ duration: 0.5, ease: 'easeOut', delay: (index % 3) * 0.08 }}
+              transition={{ duration: 0.5, ease: 'easeOut' as const, delay: (index % 3) * 0.08 }}
             >
               {/* Image area — right side when wide, top otherwise */}
               {isWide ? (
                 <>
                   {/* Content — left on desktop */}
                   <div className="flex flex-1 flex-col justify-center gap-2 p-4 lg:p-8">
-                    <span className="font-sans text-[10px] font-bold uppercase tracking-[0.06em] text-[#999]">{project.category}</span>
                     <h3 className="font-display text-[20px] font-bold uppercase leading-tight text-[#0f0f0f] lg:text-[24px]">
                       {project.title}
                     </h3>
                     <p className="font-sans text-[12px] text-[#999]">
-                      {project.location}{project.date ? ` · ${project.date}` : ''}
+                      {project.location}
                     </p>
                     <p className="font-sans mt-1 text-[13px] leading-relaxed text-[#666]">
                       {project.description}
@@ -240,16 +310,13 @@ export function Portfolio() {
                     </div>
                   </div>
                   {/* Image — right on desktop, top on mobile */}
-                  <div className="relative order-first h-64 w-full flex-shrink-0 lg:order-last lg:h-auto lg:w-1/2">
+                  <div className={`relative order-first w-full flex-shrink-0 lg:order-last lg:w-1/2 ${project.composite ? 'aspect-video bg-[#0f0f0f] lg:aspect-auto lg:h-auto' : 'h-64 lg:h-auto'}`}>
                     <Image
                       src={(project.afterImage || project.beforeImage)!}
                       alt={project.title}
                       fill
-                      className="object-cover object-center"
+                      className={project.composite ? 'object-contain' : 'object-cover object-center'}
                     />
-                    <span className="font-display absolute right-3 bottom-3 bg-[#0f0f0f]/70 px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.08em] text-[#facc15]">
-                      AFTER
-                    </span>
                   </div>
                 </>
               ) : (
@@ -263,28 +330,22 @@ export function Portfolio() {
                         className="h-64 w-full rounded-none"
                       />
                     ) : (
-                      <div className="relative h-64 w-full">
+                      <div className={`relative w-full ${project.composite ? 'aspect-video bg-[#0f0f0f]' : 'h-64'}`}>
                         <Image
                           src={(project.afterImage || project.beforeImage)!}
                           alt={project.title}
                           fill
-                          className="object-cover object-center"
+                          className={project.composite ? 'object-contain' : 'object-cover object-center'}
                         />
-                        <span className="font-display absolute right-3 bottom-3 bg-[#0f0f0f]/70 px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.08em] text-[#facc15]">
-                          AFTER
-                        </span>
                       </div>
                     )}
-                    <span className="font-sans absolute bottom-3 left-3 z-10 bg-[#0f0f0f] px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.06em] text-white">
-                      {project.category}
-                    </span>
                   </div>
                   <div className="flex flex-1 flex-col gap-1.5 p-4 lg:gap-2 lg:p-6">
                     <h3 className="font-display text-[17px] font-bold uppercase leading-tight text-[#0f0f0f] lg:text-[20px]">
                       {project.title}
                     </h3>
                     <p className="font-sans text-[11px] text-[#999] lg:text-[12px]">
-                      {project.location}{project.date ? ` · ${project.date}` : ''}
+                      {project.location}
                     </p>
                     <p className="font-sans line-clamp-2 hidden text-[13px] leading-relaxed text-[#666] lg:block">
                       {project.description}
@@ -302,6 +363,15 @@ export function Portfolio() {
             </motion.div>
             )
           })}
+          {/* Filler cells to complete the last row */}
+          {(() => {
+            const totalSlots = filteredProjects.reduce((sum, p) => sum + (p.wide ? 2 : 1), 0)
+            const remainder = totalSlots % 3
+            const fillers = remainder === 0 ? 0 : 3 - remainder
+            return Array.from({ length: fillers }).map((_, i) => (
+              <div key={`filler-${i}`} className="hidden bg-white lg:block" />
+            ))
+          })()}
         </div>
 
         {/* CTA bar */}
@@ -318,7 +388,7 @@ export function Portfolio() {
           <div className="flex gap-3">
             <a
               href="tel:5127483225"
-              className="font-display inline-flex items-center bg-[#facc15] px-6 py-3.5 text-[14px] font-bold uppercase tracking-[0.06em] text-[#0f0f0f] transition-opacity hover:opacity-90"
+              className="font-display inline-flex items-center bg-[#3b82f6] px-6 py-3.5 text-[14px] font-bold uppercase tracking-[0.06em] text-white transition-opacity hover:opacity-90"
             >
               Get Free Quote
             </a>

@@ -7,7 +7,7 @@ const inView = {
   initial: { opacity: 0, y: 24 },
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true, margin: '-60px' },
-  transition: { duration: 0.55, ease: 'easeOut' },
+  transition: { duration: 0.55, ease: 'easeOut' as const },
 }
 
 const nonFeatured = [
@@ -55,10 +55,10 @@ const nonFeatured = [
 
 function DesktopCard({ id, title, description, bullets, icon: Icon }: typeof nonFeatured[0]) {
   return (
-    <div className="flex flex-col gap-5 bg-white p-10">
+    <div className="flex h-full flex-col gap-5 bg-white p-10">
       <div className="flex items-start justify-between">
         <span className="font-sans text-[11px] font-semibold text-[#ccc]">{id}</span>
-        <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-[#facc15]">
+        <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-[#3b82f6]">
           <Icon className="h-3.5 w-3.5 text-[#0f0f0f]" />
         </div>
       </div>
@@ -69,14 +69,14 @@ function DesktopCard({ id, title, description, bullets, icon: Icon }: typeof non
       <ul className="flex flex-col gap-1.5">
         {bullets.map((b) => (
           <li key={b} className="flex items-start gap-2 text-[12px] leading-relaxed text-[#666]">
-            <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#facc15]" />
+            <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#3b82f6]" />
             {b}
           </li>
         ))}
       </ul>
       <a
         href="#contact"
-        className="font-sans mt-auto w-fit text-[13px] font-semibold text-[#0f0f0f] underline decoration-[#facc15] decoration-2 underline-offset-3 hover:opacity-70"
+        className="font-sans mt-auto w-fit text-[13px] font-semibold text-[#0f0f0f] underline decoration-[#3b82f6] decoration-2 underline-offset-3 hover:opacity-70"
       >
         Get Quote →
       </a>
@@ -90,7 +90,7 @@ export function Services() {
       <div className="mx-auto max-w-7xl px-6 lg:px-20">
         {/* Header */}
         <motion.div className="mb-10 lg:mb-16" {...inView}>
-          <span className="font-display mb-3 inline-block bg-[#0f0f0f] px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.1em] text-[#facc15]">
+          <span className="font-display mb-3 inline-block bg-[#0f0f0f] px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.1em] text-[#3b82f6]">
             What We Do
           </span>
           <h2 className="font-display text-[52px] font-bold uppercase leading-[0.9] tracking-tight text-[#0f0f0f] lg:text-[72px]">
@@ -105,52 +105,52 @@ export function Services() {
         {/* ── DESKTOP GRID (hidden on mobile) ── */}
         <div className="hidden gap-px bg-[#dbd8d3] lg:grid lg:grid-cols-3">
           {/* 01 Construction Cleans */}
-          <motion.div {...inView} transition={{ duration: 0.55, ease: 'easeOut', delay: 0 }}>
+          <motion.div {...inView} transition={{ duration: 0.55, ease: 'easeOut' as const, delay: 0 }}>
             <DesktopCard {...nonFeatured[0]} />
           </motion.div>
 
           {/* 02 Pressure Washing — featured, center column */}
-          <motion.div className="flex flex-col" {...inView} transition={{ duration: 0.55, ease: 'easeOut', delay: 0.08 }}>
-            <div className="flex items-center justify-between bg-[#facc15] px-6 py-3">
+          <motion.div className="flex flex-col" {...inView} transition={{ duration: 0.55, ease: 'easeOut' as const, delay: 0.08 }}>
+            <div className="flex items-center justify-between bg-[#3b82f6] px-6 py-3">
               <span className="font-sans text-[11px] font-bold uppercase tracking-[0.1em] text-[#0f0f0f]">02</span>
               <span className="font-sans text-[11px] font-bold uppercase tracking-[0.1em] text-[#0f0f0f]">Most Popular</span>
             </div>
             <div className="flex flex-1 flex-col gap-5 bg-[#0f0f0f] p-10">
-              <h3 className="font-display text-[28px] font-bold uppercase text-[#facc15]">Pressure Washing</h3>
+              <h3 className="font-display text-[28px] font-bold uppercase text-[#3b82f6]">Pressure Washing</h3>
               <p className="font-sans text-[13px] leading-relaxed text-white/55">
                 Pressure washing and softwashing for all exterior surfaces
               </p>
               <ul className="flex flex-col gap-1.5">
                 {['Building exteriors & facades', 'Houses, roofs & driveways', 'Parking garages & structures', 'Surface stain removal'].map((b) => (
                   <li key={b} className="flex items-start gap-2 text-[12px] leading-relaxed text-white/55">
-                    <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#facc15]" />
+                    <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#3b82f6]" />
                     {b}
                   </li>
                 ))}
               </ul>
-              <a href="#contact" className="font-sans mt-auto w-fit text-[13px] font-semibold text-[#facc15] underline decoration-[#facc15] decoration-2 underline-offset-3 hover:opacity-70">
+              <a href="#contact" className="font-sans mt-auto w-fit text-[13px] font-semibold text-[#3b82f6] underline decoration-[#3b82f6] decoration-2 underline-offset-3 hover:opacity-70">
                 Get Quote →
               </a>
             </div>
           </motion.div>
 
           {/* 03 Window Cleaning */}
-          <motion.div {...inView} transition={{ duration: 0.55, ease: 'easeOut', delay: 0.16 }}>
+          <motion.div {...inView} transition={{ duration: 0.55, ease: 'easeOut' as const, delay: 0.16 }}>
             <DesktopCard {...nonFeatured[1]} />
           </motion.div>
 
           {/* 04 Parking Services */}
-          <motion.div {...inView} transition={{ duration: 0.55, ease: 'easeOut', delay: 0.08 }}>
+          <motion.div {...inView} transition={{ duration: 0.55, ease: 'easeOut' as const, delay: 0.08 }}>
             <DesktopCard {...nonFeatured[2]} />
           </motion.div>
 
           {/* 05 Gutter Cleaning */}
-          <motion.div {...inView} transition={{ duration: 0.55, ease: 'easeOut', delay: 0.16 }}>
+          <motion.div {...inView} transition={{ duration: 0.55, ease: 'easeOut' as const, delay: 0.16 }}>
             <DesktopCard {...nonFeatured[3]} />
           </motion.div>
 
           {/* 06 Site Services */}
-          <motion.div {...inView} transition={{ duration: 0.55, ease: 'easeOut', delay: 0.24 }}>
+          <motion.div {...inView} transition={{ duration: 0.55, ease: 'easeOut' as const, delay: 0.24 }}>
             <DesktopCard {...nonFeatured[4]} />
           </motion.div>
         </div>
@@ -159,12 +159,12 @@ export function Services() {
         <div className="grid grid-cols-2 gap-[2px] bg-[#2a2a2a] lg:hidden">
           {/* Featured — full width */}
           <div className="col-span-2">
-            <div className="flex items-center justify-between bg-[#facc15] px-5 py-3">
+            <div className="flex items-center justify-between bg-[#3b82f6] px-5 py-3">
               <span className="font-sans text-[11px] font-bold uppercase tracking-[0.1em] text-[#0f0f0f]">01</span>
               <span className="font-sans text-[11px] font-bold uppercase tracking-[0.1em] text-[#0f0f0f]">Most Popular</span>
             </div>
             <div className="flex flex-col gap-4 bg-[#0f0f0f] p-5">
-              <h3 className="font-display text-[28px] font-bold uppercase text-[#facc15]">Pressure Washing</h3>
+              <h3 className="font-display text-[28px] font-bold uppercase text-[#3b82f6]">Pressure Washing</h3>
               <p className="font-sans text-[13px] leading-relaxed text-white/55">
                 Pressure washing and softwashing for all exterior surfaces — buildings, roofs, driveways, and more.
               </p>
@@ -175,7 +175,7 @@ export function Services() {
                   </span>
                 ))}
               </div>
-              <a href="#contact" className="font-sans text-[13px] font-semibold text-[#facc15] underline decoration-[#facc15] underline-offset-2 hover:opacity-70">
+              <a href="#contact" className="font-sans text-[13px] font-semibold text-[#3b82f6] underline decoration-[#3b82f6] underline-offset-2 hover:opacity-70">
                 Get Quote →
               </a>
             </div>
@@ -187,7 +187,7 @@ export function Services() {
               <span className="font-sans text-[10px] font-semibold text-white/30">0{i + 2}</span>
               <h3 className="font-display text-[15px] font-bold uppercase leading-tight text-white">{s.title}</h3>
               <p className="font-sans text-[11px] leading-relaxed text-white/45">{s.shortDesc}</p>
-              <a href="#contact" className="font-sans text-[12px] font-bold text-[#facc15] underline decoration-[#facc15] underline-offset-2 hover:opacity-70">
+              <a href="#contact" className="font-sans text-[12px] font-bold text-[#3b82f6] underline decoration-[#3b82f6] underline-offset-2 hover:opacity-70">
                 Quote →
               </a>
             </div>
@@ -202,7 +202,7 @@ export function Services() {
                 Complete site maintenance, cleanup & debris haul-off
               </p>
             </div>
-            <a href="#contact" className="font-sans flex-shrink-0 pl-4 text-[12px] font-bold text-[#facc15] underline decoration-[#facc15] underline-offset-2 hover:opacity-70">
+            <a href="#contact" className="font-sans flex-shrink-0 pl-4 text-[12px] font-bold text-[#3b82f6] underline decoration-[#3b82f6] underline-offset-2 hover:opacity-70">
               Quote →
             </a>
           </div>
@@ -223,7 +223,7 @@ export function Services() {
           <div className="flex flex-shrink-0 items-center gap-3">
             <a
               href="tel:5127483225"
-              className="font-display bg-[#facc15] px-5 py-3 text-[13px] font-bold uppercase tracking-[0.06em] text-[#0f0f0f] transition-opacity hover:opacity-90"
+              className="font-display bg-[#3b82f6] px-5 py-3 text-[13px] font-bold uppercase tracking-[0.06em] text-white transition-opacity hover:opacity-90"
             >
               <span className="lg:hidden">Call Us</span>
               <span className="hidden lg:inline">(512) 748-3225</span>

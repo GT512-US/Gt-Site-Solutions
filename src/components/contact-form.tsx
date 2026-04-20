@@ -17,7 +17,7 @@ export function ContactForm() {
               name="first-name"
               id="first-name"
               autoComplete="given-name"
-              className="py-3 px-4 block w-full shadow-sm bg-white/5 border-white/10 rounded-md text-white focus:ring-yellow-500 focus:border-yellow-500"
+              className="py-3 px-4 block w-full shadow-sm bg-white/5 border-white/10 rounded-md text-white focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
         </div>
@@ -31,7 +31,7 @@ export function ContactForm() {
               name="last-name"
               id="last-name"
               autoComplete="family-name"
-              className="py-3 px-4 block w-full shadow-sm bg-white/5 border-white/10 rounded-md text-white focus:ring-yellow-500 focus:border-yellow-500"
+              className="py-3 px-4 block w-full shadow-sm bg-white/5 border-white/10 rounded-md text-white focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
         </div>
@@ -45,7 +45,7 @@ export function ContactForm() {
               name="email"
               type="email"
               autoComplete="email"
-              className="py-3 px-4 block w-full shadow-sm bg-white/5 border-white/10 rounded-md text-white focus:ring-yellow-500 focus:border-yellow-500"
+              className="py-3 px-4 block w-full shadow-sm bg-white/5 border-white/10 rounded-md text-white focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
         </div>
@@ -58,7 +58,7 @@ export function ContactForm() {
               id="message"
               name="message"
               rows={4}
-              className="py-3 px-4 block w-full shadow-sm bg-white/5 border-white/10 rounded-md text-white focus:ring-yellow-500 focus:border-yellow-500"
+              className="py-3 px-4 block w-full shadow-sm bg-white/5 border-white/10 rounded-md text-white focus:ring-blue-500 focus:border-blue-500"
               defaultValue={''}
             />
           </div>

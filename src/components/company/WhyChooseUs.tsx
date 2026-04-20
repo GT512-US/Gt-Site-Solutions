@@ -5,12 +5,12 @@ export function WhyChooseUs() {
 
         {/* Section header */}
         <div className="mb-16 flex flex-col gap-3">
-          <span className="font-sans inline-block w-fit bg-[#facc15] px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.1em] text-[#0f0f0f]">
+          <span className="font-sans inline-block w-fit bg-[#3b82f6] px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.1em] text-white">
             Why GT Site Solutions
           </span>
           <h2 className="font-display text-[52px] font-bold uppercase leading-[0.9] tracking-tight text-white lg:text-[72px]">
             Built on Quality,<br />
-            <span className="text-[#facc15]">Reliability &amp;</span><br />
+            <span className="text-[#3b82f6]">Reliability &amp;</span><br />
             Attention to Detail
           </h2>
         </div>
@@ -42,7 +42,7 @@ export function WhyChooseUs() {
 
         {/* Services breakdown */}
         <div className="mb-6 flex flex-col gap-2">
-          <span className="font-sans text-[11px] font-bold uppercase tracking-[0.1em] text-[#facc15]">
+          <span className="font-sans text-[11px] font-bold uppercase tracking-[0.1em] text-[#3b82f6]">
             What We Offer
           </span>
           <h3 className="font-display text-[32px] font-bold uppercase leading-tight text-white lg:text-[40px]">
@@ -57,7 +57,7 @@ export function WhyChooseUs() {
         <div className="mt-10 grid gap-[1px] bg-[#ffffff08] sm:grid-cols-3">
           {/* Residential */}
           <div className="bg-[#0f0f0f] p-8">
-            <h4 className="font-display mb-5 text-[16px] font-bold uppercase tracking-[0.06em] text-[#facc15]">
+            <h4 className="font-display mb-5 text-[16px] font-bold uppercase tracking-[0.06em] text-[#3b82f6]">
               Residential Services
             </h4>
             <ul className="flex flex-col gap-2.5">
@@ -70,7 +70,7 @@ export function WhyChooseUs() {
                 'Residential window cleaning',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2.5 font-sans text-[13px] leading-relaxed text-white/60">
-                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#facc15]" />
+                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#3b82f6]" />
                   {item}
                 </li>
               ))}
@@ -79,7 +79,7 @@ export function WhyChooseUs() {
 
           {/* Commercial */}
           <div className="bg-[#0f0f0f] p-8">
-            <h4 className="font-display mb-5 text-[16px] font-bold uppercase tracking-[0.06em] text-[#facc15]">
+            <h4 className="font-display mb-5 text-[16px] font-bold uppercase tracking-[0.06em] text-[#3b82f6]">
               Commercial Services
             </h4>
             <ul className="flex flex-col gap-2.5">
@@ -92,7 +92,7 @@ export function WhyChooseUs() {
                 'Facade cleaning, soft washing',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2.5 font-sans text-[13px] leading-relaxed text-white/60">
-                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#facc15]" />
+                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#3b82f6]" />
                   {item}
                 </li>
               ))}
@@ -101,7 +101,7 @@ export function WhyChooseUs() {
 
           {/* Construction */}
           <div className="bg-[#0f0f0f] p-8">
-            <h4 className="font-display mb-5 text-[16px] font-bold uppercase tracking-[0.06em] text-[#facc15]">
+            <h4 className="font-display mb-5 text-[16px] font-bold uppercase tracking-[0.06em] text-[#3b82f6]">
               Construction Site Services
             </h4>
             <ul className="flex flex-col gap-2.5">
@@ -113,7 +113,7 @@ export function WhyChooseUs() {
                 'Parking lot striping',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2.5 font-sans text-[13px] leading-relaxed text-white/60">
-                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#facc15]" />
+                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#3b82f6]" />
                   {item}
                 </li>
               ))}
@@ -135,7 +135,7 @@ export function WhyChooseUs() {
             <h3 className="font-display mb-4 text-[22px] font-bold uppercase text-white">
               Professional Equipment &amp;<br />Responsible Practices
             </h3>
-            <div className="h-[2px] w-10 bg-[#facc15]" />
+            <div className="h-[2px] w-10 bg-[#3b82f6]" />
             <p className="font-sans mt-5 text-[15px] leading-relaxed text-white/60">
               Our experienced team uses modern equipment and industry-proven methods to safely
               and effectively clean exterior surfaces without causing damage. We are fully licensed
@@ -151,7 +151,7 @@ export function WhyChooseUs() {
             <h3 className="font-display mb-4 text-[22px] font-bold uppercase text-white">
               Serving Austin and<br />Surrounding Areas
             </h3>
-            <div className="h-[2px] w-10 bg-[#facc15]" />
+            <div className="h-[2px] w-10 bg-[#3b82f6]" />
             <p className="font-sans mt-5 text-[15px] leading-relaxed text-white/60">
               GT Site Solutions proudly serves Austin and surrounding communities with dependable
               exterior cleaning and site services. Whether you need a one-time cleaning or ongoing
@@ -164,7 +164,7 @@ export function WhyChooseUs() {
         <div className="my-16 border-t border-white/[0.08]" />
 
         {/* A Partner You Can Rely On — full-width */}
-        <div className="bg-[#facc15] p-8 lg:p-12">
+        <div className="bg-[#3b82f6] p-8 lg:p-12">
           <h3 className="font-display text-[28px] font-bold uppercase text-[#0f0f0f] lg:text-[36px]">
             A Partner You Can Rely On
           </h3>

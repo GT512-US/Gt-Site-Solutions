@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="overflow-hidden">
-      <div className="lg:flex lg:h-screen lg:flex-col">
+      <div className="lg:flex lg:min-h-screen lg:flex-col">
         <Hero />
         <StatsBar />
       </div>
@@ -50,16 +50,16 @@ function StatsBar() {
   ]
 
   return (
-    <div className="grid grid-cols-2 gap-[1px] bg-[#e8b800] md:grid-cols-4">
+    <div className="grid grid-cols-2 gap-[1px] bg-blue-700 md:grid-cols-4">
       {stats.map((stat, i) => (
         <div
           key={i}
-          className="flex flex-col items-center justify-center bg-[#facc15] py-7 text-center"
+          className="flex flex-col items-center justify-center bg-[#3b82f6] py-7 text-center"
         >
-          <div className="font-display text-[44px] font-bold leading-none text-[#0f0f0f] md:text-[52px]">
+          <div className="font-display text-[44px] font-bold leading-none text-white md:text-[52px]">
             {stat.number}
           </div>
-          <div className="font-sans mt-1 text-[11px] font-bold uppercase tracking-[0.1em] text-[#0f0f0f]/60">
+          <div className="font-sans mt-1 text-[11px] font-bold uppercase tracking-[0.1em] text-white/70">
             {stat.label}
           </div>
         </div>

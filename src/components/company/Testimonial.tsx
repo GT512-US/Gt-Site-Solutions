@@ -24,7 +24,7 @@ export function Testimonial() {
         <figcaption className="mt-6 border-t border-white/20 pt-6">
           <p className="text-sm/6 font-medium text-white">Sarah Martinez</p>
           <p className="text-sm/6 font-medium">
-            <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent">
               Property Manager, Austin Heights Apartments
             </span>
           </p>

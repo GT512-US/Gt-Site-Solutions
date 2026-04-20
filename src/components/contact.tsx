@@ -49,7 +49,7 @@ export function Contact() {
   }
 
   const inputClass =
-    'font-sans w-full border border-[#ddd] bg-white px-4 py-3.5 text-[14px] text-[#0f0f0f] placeholder-[#bbb] outline-none transition focus:border-[#facc15] focus:ring-1 focus:ring-[#facc15]'
+    'font-sans w-full border border-[#ddd] bg-white px-4 py-3.5 text-[14px] text-[#0f0f0f] placeholder-[#bbb] outline-none transition focus:border-[#3b82f6] focus:ring-1 focus:ring-[#3b82f6]'
   const labelClass =
     'font-sans mb-2 block text-[11px] font-bold uppercase tracking-[0.08em] text-[#555]'
 
@@ -62,9 +62,9 @@ export function Contact() {
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.55, ease: 'easeOut' }}
+          transition={{ duration: 0.55, ease: 'easeOut' as const }}
         >
-          <span className="font-sans mb-3 inline-block bg-[#0f0f0f] px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.1em] text-[#facc15]">
+          <span className="font-sans mb-3 inline-block bg-[#0f0f0f] px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.1em] text-[#3b82f6]">
             GET IN TOUCH
           </span>
           <h2 className="font-display text-[56px] font-bold uppercase leading-[0.92] text-[#0f0f0f] lg:text-[72px]">
@@ -81,7 +81,7 @@ export function Contact() {
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
+          transition={{ duration: 0.6, ease: 'easeOut' as const, delay: 0.1 }}
         >
           {/* Info panel */}
           <div className="bg-[#0f0f0f] p-8 lg:p-10">
@@ -97,8 +97,8 @@ export function Contact() {
               <div className="flex flex-col gap-7">
                 {/* Phone */}
                 <div className="flex items-start gap-4">
-                  <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center bg-[#facc15]/15">
-                    <svg className="h-4 w-4 fill-[#facc15]" viewBox="0 0 24 24">
+                  <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center bg-[#3b82f6]/15">
+                    <svg className="h-4 w-4 fill-[#3b82f6]" viewBox="0 0 24 24">
                       <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
                     </svg>
                   </div>
@@ -106,11 +106,11 @@ export function Contact() {
                     <p className="font-sans mb-2 text-[11px] font-bold uppercase tracking-[0.08em] text-white/40">
                       Call Us Directly
                     </p>
-                    <a href="tel:5127483225" className="font-display block text-[22px] font-bold text-[#facc15] hover:opacity-80">
+                    <a href="tel:5127483225" className="font-display block text-[22px] font-bold text-[#3b82f6] hover:opacity-80">
                       (512) 748-3225
                     </a>
                     <p className="font-sans text-[12px] text-white/35">Ruben – CEO</p>
-                    <a href="tel:5126897606" className="font-display mt-1.5 block text-[22px] font-bold text-[#facc15] hover:opacity-80">
+                    <a href="tel:5126897606" className="font-display mt-1.5 block text-[22px] font-bold text-[#3b82f6] hover:opacity-80">
                       (512) 689-7606
                     </a>
                     <p className="font-sans text-[12px] text-white/35">Dounia Mohad – CMO</p>
@@ -119,8 +119,8 @@ export function Contact() {
 
                 {/* Email */}
                 <div className="flex items-start gap-4">
-                  <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center bg-[#facc15]/15">
-                    <svg className="h-4 w-4 fill-none stroke-[#facc15]" strokeWidth={2} viewBox="0 0 24 24">
+                  <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center bg-[#3b82f6]/15">
+                    <svg className="h-4 w-4 fill-none stroke-[#3b82f6]" strokeWidth={2} viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
@@ -128,11 +128,11 @@ export function Contact() {
                     <p className="font-sans mb-2 text-[11px] font-bold uppercase tracking-[0.08em] text-white/40">
                       Email Us
                     </p>
-                    <a href="mailto:Ruben@gtsitesolutions.com" className="font-sans block text-[14px] text-[#facc15] hover:opacity-80">
+                    <a href="mailto:Ruben@gtsitesolutions.com" className="font-sans block text-[14px] text-[#3b82f6] hover:opacity-80">
                       Ruben@gtsitesolutions.com
                     </a>
                     <p className="font-sans text-[12px] text-white/35">Ruben – CEO</p>
-                    <a href="mailto:Dounia@gtsitesolutions.com" className="font-sans mt-1.5 block text-[14px] text-[#facc15] hover:opacity-80">
+                    <a href="mailto:Dounia@gtsitesolutions.com" className="font-sans mt-1.5 block text-[14px] text-[#3b82f6] hover:opacity-80">
                       Dounia@gtsitesolutions.com
                     </a>
                     <p className="font-sans text-[12px] text-white/35">Dounia Mohad – CMO</p>
@@ -141,8 +141,8 @@ export function Contact() {
 
                 {/* Hours */}
                 <div className="flex items-start gap-4">
-                  <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center bg-[#facc15]/15">
-                    <svg className="h-4 w-4 fill-none stroke-[#facc15]" strokeWidth={2} viewBox="0 0 24 24">
+                  <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center bg-[#3b82f6]/15">
+                    <svg className="h-4 w-4 fill-none stroke-[#3b82f6]" strokeWidth={2} viewBox="0 0 24 24">
                       <circle cx="12" cy="12" r="10" />
                       <polyline points="12 6 12 12 16 14" />
                     </svg>
@@ -153,7 +153,7 @@ export function Contact() {
                     </p>
                     <p className="font-sans text-[14px] text-white/65">Mon–Fri: 7:00 AM – 6:00 PM</p>
                     <p className="font-sans text-[14px] text-white/65">Saturday: 8:00 AM – 4:00 PM</p>
-                    <p className="font-sans mt-1.5 text-[13px] text-[#facc15]">
+                    <p className="font-sans mt-1.5 text-[13px] text-[#3b82f6]">
                       24/7 Emergency Service Available
                     </p>
                   </div>
@@ -169,7 +169,7 @@ export function Contact() {
                   { val: '500+', label: 'Projects' },
                 ].map((b) => (
                   <div key={b.label} className="bg-[#0f0f0f] py-4 text-center">
-                    <div className="font-display text-[24px] font-bold text-[#facc15]">{b.val}</div>
+                    <div className="font-display text-[24px] font-bold text-[#3b82f6]">{b.val}</div>
                     <div className="font-sans text-[10px] uppercase tracking-[0.08em] text-white/40">{b.label}</div>
                   </div>
                 ))}
@@ -248,7 +248,7 @@ export function Contact() {
               className={`font-display flex w-full items-center justify-center gap-2 py-4 text-[16px] font-bold uppercase tracking-[0.06em] transition-opacity disabled:opacity-70 ${
                 isSubmitted
                   ? 'bg-green-500 text-white'
-                  : 'bg-[#facc15] text-[#0f0f0f] hover:opacity-90'
+                  : 'bg-[#3b82f6] text-white hover:opacity-90'
               }`}
             >
               {isSubmitted ? (

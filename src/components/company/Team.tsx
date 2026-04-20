@@ -3,12 +3,12 @@ export function Team() {
     <section className="bg-[#f5f3ef] py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-20">
         <div className="mb-12 flex flex-col gap-3">
-          <span className="font-sans inline-block w-fit bg-[#0f0f0f] px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.1em] text-[#facc15]">
+          <span className="font-sans inline-block w-fit bg-[#0f0f0f] px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.1em] text-[#3b82f6]">
             Our Story
           </span>
           <h2 className="font-display text-[52px] font-bold uppercase leading-[0.9] tracking-tight text-[#0f0f0f] lg:text-[72px]">
             Professional<br />
-            <span className="text-[#facc15]">Cleaning &amp; Site</span><br />
+            <span className="text-[#3b82f6]">Cleaning &amp; Site</span><br />
             Solutions
           </h2>
         </div>
@@ -31,7 +31,7 @@ export function Team() {
             <div className="mt-2 flex flex-col gap-3 sm:flex-row">
               <a
                 href="tel:5127483225"
-                className="font-display inline-flex items-center justify-center bg-[#facc15] px-6 py-3.5 text-[14px] font-bold uppercase tracking-[0.06em] text-[#0f0f0f] transition-opacity hover:opacity-90"
+                className="font-display inline-flex items-center justify-center bg-[#3b82f6] px-6 py-3.5 text-[14px] font-bold uppercase tracking-[0.06em] text-white transition-opacity hover:opacity-90"
               >
                 Call (512) 748-3225
               </a>

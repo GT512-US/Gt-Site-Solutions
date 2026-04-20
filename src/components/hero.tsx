@@ -14,12 +14,12 @@ const serviceCards = [
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6, ease: 'easeOut', delay },
+  transition: { duration: 0.6, ease: 'easeOut' as const, delay },
 })
 
 export function Hero() {
   return (
-    <section className="relative flex flex-1 flex-col bg-[#0f0f0f] min-h-[80svh] lg:min-h-0 lg:overflow-hidden">
+    <section className="relative flex flex-1 flex-col bg-[#0f0f0f] min-h-[80svh] lg:min-h-[680px]">
       {/* Hero background image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -34,18 +34,18 @@ export function Hero() {
 
       {/* Yellow left accent bar */}
       <motion.div
-        className="absolute top-0 left-0 z-20 w-[3px] bg-[#facc15]"
+        className="absolute top-0 left-0 z-20 w-[3px] bg-[#3b82f6]"
         initial={{ height: 0 }}
         animate={{ height: '100%' }}
-        transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
+        transition={{ duration: 0.8, ease: 'easeOut' as const, delay: 0.2 }}
       />
 
       {/* Vertical divider (desktop) */}
-      <div className="absolute top-0 right-[380px] z-20 hidden h-full w-px bg-[#facc15]/10 lg:block" />
+      <div className="absolute top-0 right-[380px] z-20 hidden h-full w-px bg-[#3b82f6]/10 lg:block" />
 
       {/* Ghost watermark */}
       <div className="pointer-events-none absolute inset-0 z-10 overflow-hidden" aria-hidden="true">
-        <Logo className="absolute right-[-20px] bottom-[-20px] h-auto w-[260px] select-none text-white/[0.15] lg:w-[400px]" />
+        <Logo className="absolute right-0 bottom-0 h-auto w-[260px] select-none text-white/[0.15] lg:w-[400px]" />
       </div>
 
       {/* Content */}
@@ -54,7 +54,7 @@ export function Hero() {
         <div className="flex flex-1 flex-col justify-center pt-28 pb-10 lg:pt-32 lg:pb-12 lg:pr-16">
           {/* Trust badge */}
           <motion.div className="mb-8 flex items-center gap-2.5" {...fadeUp(0.1)}>
-            <div className="h-2 w-2 flex-shrink-0 rounded-full bg-[#facc15]" />
+            <div className="h-2 w-2 flex-shrink-0 rounded-full bg-[#3b82f6]" />
             <span className="font-sans text-[13px] font-semibold uppercase tracking-[0.08em] text-white/60">
               Licensed &amp; Insured · Austin, TX · 3+ Years
             </span>
@@ -69,13 +69,13 @@ export function Hero() {
               Professional
             </motion.span>
             <motion.span
-              className="font-display text-[60px] font-bold uppercase leading-[0.9] tracking-tight text-[#facc15] lg:text-[82px]"
+              className="font-display text-[60px] font-bold uppercase leading-[0.9] tracking-tight text-[#3b82f6] lg:text-[82px]"
               {...fadeUp(0.28)}
             >
               Exterior
             </motion.span>
             <motion.span
-              className="font-display text-[60px] font-bold uppercase leading-[0.9] tracking-tight text-[#facc15] lg:text-[82px]"
+              className="font-display text-[60px] font-bold uppercase leading-[0.9] tracking-tight text-[#3b82f6] lg:text-[82px]"
               {...fadeUp(0.36)}
             >
               Cleaning
@@ -84,7 +84,7 @@ export function Hero() {
 
           {/* Subheading */}
           <motion.div className="mb-6 flex items-start gap-3" {...fadeUp(0.44)}>
-            <div className="mt-[10px] h-[2px] w-7 flex-shrink-0 bg-[#facc15]" />
+            <div className="mt-[10px] h-[2px] w-7 flex-shrink-0 bg-[#3b82f6]" />
             <p className="font-display text-sm font-medium uppercase tracking-[0.06em] text-white/70 lg:text-[15px]">
               We bring solutions to your residential and commercial properties
             </p>
@@ -113,7 +113,7 @@ export function Hero() {
               'Fully Insured',
             ].map((item) => (
               <div key={item} className="flex items-center gap-2">
-                <div className="h-[5px] w-[5px] flex-shrink-0 rounded-full bg-[#facc15]" />
+                <div className="h-[5px] w-[5px] flex-shrink-0 rounded-full bg-[#3b82f6]" />
                 {item}
               </div>
             ))}
@@ -123,7 +123,7 @@ export function Hero() {
           <motion.div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap" {...fadeUp(0.64)}>
             <a
               href="tel:5127483225"
-              className="font-display flex items-center justify-center gap-2 bg-[#facc15] px-7 py-4 text-[15px] font-bold uppercase tracking-[0.06em] text-[#0f0f0f] transition-opacity hover:opacity-90"
+              className="font-display flex items-center justify-center gap-2 bg-[#3b82f6] px-7 py-4 text-[15px] font-bold uppercase tracking-[0.06em] text-white transition-opacity hover:opacity-90"
             >
               <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
@@ -145,16 +145,16 @@ export function Hero() {
         {/* Right — service cards + social proof (desktop only) */}
         <div className="hidden w-[360px] flex-shrink-0 flex-col justify-center gap-3 pt-28 pb-10 lg:flex">
           {/* 2×2 service card grid */}
-          <div className="grid grid-cols-2 gap-[2px] bg-[#facc15]/10">
+          <div className="grid grid-cols-2 gap-[2px] bg-[#3b82f6]/10">
             {serviceCards.map((card, i) => (
               <motion.div
                 key={card.label}
                 className="flex flex-col gap-3 bg-[#0f0f0f]/80 p-5 backdrop-blur-sm"
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, ease: 'easeOut', delay: 0.5 + i * 0.08 }}
+                transition={{ duration: 0.5, ease: 'easeOut' as const, delay: 0.5 + i * 0.08 }}
               >
-                <div className="h-[2px] w-6 bg-[#facc15]" />
+                <div className="h-[2px] w-6 bg-[#3b82f6]" />
                 <span className="font-display text-sm font-bold uppercase tracking-[0.04em] text-white">
                   {card.label}
                 </span>
@@ -164,20 +164,20 @@ export function Hero() {
 
           {/* Social proof card */}
           <motion.div
-            className="border border-[#facc15]/20 bg-[#0f0f0f]/70 p-5 backdrop-blur-sm"
+            className="border border-[#3b82f6]/20 bg-[#0f0f0f]/70 p-5 backdrop-blur-sm"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: 'easeOut', delay: 0.82 }}
+            transition={{ duration: 0.5, ease: 'easeOut' as const, delay: 0.82 }}
           >
             <div className="mb-3 flex items-center justify-between">
               <div className="flex gap-0.5">
                 {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="h-4 w-4 fill-[#facc15]" viewBox="0 0 20 20">
+                  <svg key={i} className="h-4 w-4 fill-[#3b82f6]" viewBox="0 0 20 20">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
                 ))}
               </div>
-              <span className="font-display text-2xl font-bold text-[#facc15]">500+</span>
+              <span className="font-display text-2xl font-bold text-[#3b82f6]">500+</span>
             </div>
             <p className="font-sans mb-3 text-sm italic leading-relaxed text-white/70">
               "Exceptional service and results. Our property looks brand new!"

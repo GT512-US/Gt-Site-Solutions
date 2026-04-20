@@ -11,6 +11,7 @@ const links = [
   { href: '/#testimonials', label: 'Reviews' },
   { href: '/#contact', label: 'Contact' },
   { href: '/company', label: 'Company' },
+  { href: '/careers', label: 'Careers' },
 ]
 
 export function Navbar({ banner }: { banner?: React.ReactNode }) {
@@ -33,12 +34,12 @@ export function Navbar({ banner }: { banner?: React.ReactNode }) {
             ? '1px solid rgba(250,204,21,0.12)'
             : '1px solid transparent',
         }}
-        transition={{ duration: 0.25, ease: 'easeInOut' }}
+        transition={{ duration: 0.25, ease: 'easeInOut' as const }}
         style={{ WebkitBackdropFilter: isScrolled ? 'blur(18px)' : 'blur(0px)' }}
       >
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-20">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-12 xl:px-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
+          <Link href="/" className="flex shrink-0 items-center gap-2 group">
             <Logo className="h-8 text-white transition-opacity group-hover:opacity-80" />
             <span className="font-display hidden sm:block text-[15px] font-bold uppercase tracking-[0.06em] text-white/70">
               Site Solutions
@@ -46,12 +47,12 @@ export function Navbar({ banner }: { banner?: React.ReactNode }) {
           </Link>
 
           {/* Desktop links */}
-          <nav className="hidden items-center lg:flex">
+          <nav className="hidden min-w-0 items-center lg:flex">
             {links.map(({ href, label }) => (
               <Link
                 key={href}
                 href={href}
-                className="font-sans relative px-4 py-2 text-[13px] font-medium tracking-wide text-white/55 transition-colors hover:text-white"
+                className="font-sans relative px-3 py-2 text-[13px] font-medium tracking-wide text-white/55 transition-colors hover:text-white xl:px-4"
               >
                 {label}
               </Link>
@@ -59,10 +60,10 @@ export function Navbar({ banner }: { banner?: React.ReactNode }) {
           </nav>
 
           {/* Desktop CTA */}
-          <div className="hidden items-center gap-3 lg:flex">
+          <div className="hidden shrink-0 items-center gap-3 lg:flex">
             <a
               href="tel:5127483225"
-              className="font-display bg-[#facc15] px-5 py-2.5 text-[12px] font-bold uppercase tracking-[0.08em] text-[#0f0f0f] transition-opacity hover:opacity-85"
+              className="font-display whitespace-nowrap bg-[#3b82f6] px-4 py-2.5 text-[12px] font-bold uppercase tracking-[0.08em] text-white transition-opacity hover:opacity-85 xl:px-5"
             >
               (512) 748-3225
             </a>
@@ -76,7 +77,7 @@ export function Navbar({ banner }: { banner?: React.ReactNode }) {
           >
             <div className="flex flex-col gap-[5px]">
               <div className="h-0.5 w-[22px] bg-white" />
-              <div className="h-0.5 w-4 bg-[#facc15]" />
+              <div className="h-0.5 w-4 bg-[#3b82f6]" />
               <div className="h-0.5 w-[22px] bg-white" />
             </div>
           </button>
@@ -106,7 +107,7 @@ export function Navbar({ banner }: { banner?: React.ReactNode }) {
             >
               <div className="relative h-[22px] w-[22px]">
                 <div className="absolute top-1/2 left-0 h-0.5 w-[22px] -translate-y-1/2 rotate-45 bg-white" />
-                <div className="absolute top-1/2 left-0 h-0.5 w-[22px] -translate-y-1/2 -rotate-45 bg-[#facc15]" />
+                <div className="absolute top-1/2 left-0 h-0.5 w-[22px] -translate-y-1/2 -rotate-45 bg-[#3b82f6]" />
               </div>
             </button>
           </div>
@@ -123,7 +124,7 @@ export function Navbar({ banner }: { banner?: React.ReactNode }) {
                 <Link
                   href={href}
                   onClick={() => setMobileOpen(false)}
-                  className="font-display block border-b border-white/[0.06] py-5 text-[36px] font-bold uppercase leading-none tracking-tight text-white transition-colors hover:text-[#facc15]"
+                  className="font-display block border-b border-white/[0.06] py-5 text-[36px] font-bold uppercase leading-none tracking-tight text-white transition-colors hover:text-[#3b82f6]"
                 >
                   {label}
                 </Link>
@@ -135,7 +136,7 @@ export function Navbar({ banner }: { banner?: React.ReactNode }) {
           <div className="border-t border-white/[0.06] px-6 py-8">
             <a
               href="tel:5127483225"
-              className="font-display block w-full bg-[#facc15] py-4 text-center text-[16px] font-bold uppercase tracking-[0.08em] text-[#0f0f0f]"
+              className="font-display block w-full bg-[#3b82f6] py-4 text-center text-[16px] font-bold uppercase tracking-[0.08em] text-white"
             >
               Call (512) 748-3225
             </a>

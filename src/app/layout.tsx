@@ -36,7 +36,7 @@ export default function RootLayout({
           href="/blog/feed.xml"
         />
       </head>
-      <body className="text-gray-950 antialiased">
+      <body className="overflow-x-hidden text-gray-950 antialiased">
         <Navbar />
         {children}
         <SanityLive revalidateSyncTags={revalidateSyncTags} />

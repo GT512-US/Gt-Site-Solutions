@@ -7,8 +7,8 @@
   --radius-4xl: 2rem;
 
   /* GT Site Solutions Brand Colors */
-  --color-brand: #facc15;
-  --color-brand-foreground: #0f0f0f;
+  --color-brand: #3b82f6;
+  --color-brand-foreground: #ffffff;
   --color-site-black: #0f0f0f;
   --color-site-warm: #f5f3ef;
   --color-site-gap: #d6d3cd;
@@ -18,7 +18,7 @@
   --color-foreground: #0f0f0f;
   --color-muted: #f5f3ef;
   --color-muted-foreground: #666666;
-  --color-ring: #facc15;
+  --color-ring: #3b82f6;
 }
 
 @keyframes move-x {
@@ -34,13 +34,13 @@
   --tw-prose-body: theme(colors.white / 80%);
   --tw-prose-headings: theme(colors.white);
   --tw-prose-lead: theme(colors.white / 90%);
-  --tw-prose-links: theme(colors.amber[400]);
+  --tw-prose-links: theme(colors.blue[400]);
   --tw-prose-bold: theme(colors.white);
   --tw-prose-counters: theme(colors.white / 70%);
-  --tw-prose-bullets: theme(colors.amber[400]);
+  --tw-prose-bullets: theme(colors.blue[400]);
   --tw-prose-hr: theme(colors.white / 20%);
   --tw-prose-quotes: theme(colors.white);
-  --tw-prose-quote-borders: theme(colors.amber[400]);
+  --tw-prose-quote-borders: theme(colors.blue[400]);
   --tw-prose-captions: theme(colors.white / 70%);
   --tw-prose-code: theme(colors.white);
   --tw-prose-pre-code: theme(colors.white / 90%);
@@ -66,7 +66,7 @@
 }
 
 .prose a {
-  @apply font-medium text-amber-400 transition-colors hover:text-amber-500;
+  @apply font-medium text-blue-400 transition-colors hover:text-blue-500;
 }
 
 .prose ul {
@@ -78,5 +78,5 @@
 }
 
 .prose blockquote {
-  @apply my-8 border-l-4 border-amber-400 pl-6 text-xl italic text-white/90;
+  @apply my-8 border-l-4 border-blue-400 pl-6 text-xl italic text-white/90;
 }
