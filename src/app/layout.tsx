@@ -6,8 +6,8 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Radiant',
-    default: 'Radiant - Close every deal',
+    template: '%s - GT Site Solutions',
+    default: 'GT Site Solutions - Professional Exterior Cleaning in Austin',
   },
 }
 
