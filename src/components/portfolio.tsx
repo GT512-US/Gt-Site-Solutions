@@ -189,7 +189,7 @@ export function Portfolio() {
             <span className="font-sans inline-block w-fit bg-[#0f0f0f] px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.1em] text-[#3b82f6]">
               OUR WORK
             </span>
-            <h2 className="font-display text-[56px] font-bold uppercase leading-[0.92] tracking-tight text-[#0f0f0f] lg:text-[72px]">
+            <h2 className="font-display text-[40px] font-bold uppercase leading-[0.92] tracking-tight text-[#0f0f0f] sm:text-[56px] lg:text-[72px]">
               See The<br />
               <span className="text-[#3b82f6]">Transformation</span>
             </h2>
@@ -385,16 +385,16 @@ export function Portfolio() {
               areas.
             </p>
           </div>
-          <div className="flex gap-3">
+          <div className="flex flex-shrink-0 gap-3">
             <a
               href="tel:5127483225"
-              className="font-display inline-flex items-center bg-[#3b82f6] px-6 py-3.5 text-[14px] font-bold uppercase tracking-[0.06em] text-white transition-opacity hover:opacity-90"
+              className="font-display inline-flex items-center whitespace-nowrap bg-[#3b82f6] px-6 py-3.5 text-[14px] font-bold uppercase tracking-[0.06em] text-white transition-opacity hover:opacity-90"
             >
               Get Free Quote
             </a>
             <a
               href="#contact"
-              className="font-display inline-flex items-center border border-white/25 px-6 py-3.5 text-[14px] font-semibold uppercase tracking-[0.06em] text-white transition-colors hover:border-white/50"
+              className="font-display inline-flex items-center whitespace-nowrap border border-white/25 px-6 py-3.5 text-[14px] font-semibold uppercase tracking-[0.06em] text-white transition-colors hover:border-white/50"
             >
               Contact Us
             </a>
