@@ -2,12 +2,13 @@ import Link from 'next/link'
 import { Logo } from '@/components/logo'
 
 const serviceLinks = [
-  'Construction Cleans',
-  'Pressure Washing',
-  'Window Cleaning',
-  'Gutter Cleaning',
-  'Parking Lot Striping',
-  'Site Clean Up',
+  { label: 'Construction Cleans', href: '/services/post-construction-cleaning' },
+  { label: 'Pressure Washing', href: '/services/pressure-washing' },
+  { label: 'Window Cleaning', href: '/services/window-cleaning' },
+  { label: 'Gutter Cleaning', href: '/services/gutter-cleaning' },
+  { label: 'Parking Lot Striping', href: '/services/parking-lot-striping' },
+  { label: 'Site Clean Up', href: '/services/site-cleanup' },
+  { label: 'Graffiti Removal', href: '/services/graffiti-removal' },
 ]
 
 const serviceAreas = [
@@ -78,12 +79,12 @@ export function Footer() {
               </h4>
               <ul className="flex flex-col gap-2.5">
                 {serviceLinks.map((s) => (
-                  <li key={s}>
+                  <li key={s.href}>
                     <Link
-                      href="#services"
+                      href={s.href}
                       className="font-sans text-[13px] text-white/45 transition-colors hover:text-[#3b82f6]"
                     >
-                      {s}
+                      {s.label}
                     </Link>
                   </li>
                 ))}
@@ -156,27 +157,6 @@ export function Footer() {
               <p className="font-sans mt-0.5 text-[11px] text-white/25">
                 Ruben – CEO | Owner
               </p>
-            </div>
-            {/* Social */}
-            <div className="flex items-center gap-3">
-              <a href="#" className="flex h-8 w-8 items-center justify-center bg-white/[0.06] text-white/50 transition-colors hover:bg-[#3b82f6]/20 hover:text-[#3b82f6]" aria-label="Facebook">
-                <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" /></svg>
-              </a>
-              <a href="#" className="flex h-8 w-8 items-center justify-center bg-white/[0.06] text-white/50 transition-colors hover:bg-[#3b82f6]/20 hover:text-[#3b82f6]" aria-label="Instagram">
-                <svg className="h-4 w-4 fill-none stroke-current" strokeWidth={2} viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" /><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" /></svg>
-              </a>
-              <a href="#" className="flex h-8 w-8 items-center justify-center bg-white/[0.06] text-white/50 transition-colors hover:bg-[#3b82f6]/20 hover:text-[#3b82f6]" aria-label="LinkedIn">
-                <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" /><circle cx="4" cy="4" r="2" /></svg>
-              </a>
-            </div>
-            {/* Legal */}
-            <div className="flex gap-5">
-              <Link href="/privacy" className="font-sans text-[13px] text-white/35 hover:text-white/60">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="font-sans text-[13px] text-white/35 hover:text-white/60">
-                Terms of Service
-              </Link>
             </div>
           </div>
         </div>

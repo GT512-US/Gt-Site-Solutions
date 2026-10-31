@@ -7,12 +7,14 @@ import { Testimonials } from '@/components/testimonials'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title:
-    'GT Site Solutions - Professional Exterior Cleaning Services in Austin',
+  title: {
+    absolute: 'Pressure Washing & Exterior Cleaning in Austin, TX | GT Site Solutions',
+  },
   description:
     'Professional exterior cleaning services in Austin, TX. Construction cleans, pressure washing, window cleaning, and more. Licensed & insured. Call (512) 748-3225 for a free quote.',
   keywords:
     'exterior cleaning, pressure washing, window cleaning, construction cleaning, Austin TX, commercial cleaning, residential cleaning',
+  alternates: { canonical: '/' },
   openGraph: {
     title: 'GT Site Solutions - Professional Exterior Cleaning',
     description:
@@ -43,10 +45,10 @@ export default function Home() {
 
 function StatsBar() {
   const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '3+', label: 'Years in Business' },
-    { number: '24hr', label: 'Quote Response' },
-    { number: '100%', label: 'Satisfaction Rate' },
+    { number: '500+', label: 'Projects completed' },
+    { number: '3+', label: 'Years in business' },
+    { number: '24hr', label: 'Quote response' },
+    { number: '100%', label: 'Satisfaction rate' },
   ]
 
   return (
@@ -59,7 +61,7 @@ function StatsBar() {
           <div className="font-display text-[44px] font-bold leading-none text-white md:text-[52px]">
             {stat.number}
           </div>
-          <div className="font-sans mt-1 text-[11px] font-bold uppercase tracking-[0.1em] text-white/70">
+          <div className="font-sans mt-1.5 text-[13px] font-semibold text-white/80">
             {stat.label}
           </div>
         </div>

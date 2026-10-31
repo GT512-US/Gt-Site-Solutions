@@ -7,8 +7,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Blog - GT Site Solutions',
+  title: 'Blog',
   description: 'Read our latest articles and project showcases.',
+  alternates: { canonical: '/blog' },
 };
 
 export default function BlogPage() {

@@ -1,6 +1,6 @@
 'use client'
 
-import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
+import { MotionConfig, motion, useMotionValueEvent, useScroll } from 'framer-motion'
 import Link from 'next/link'
 import { useState } from 'react'
 import { Logo } from './logo'
@@ -24,14 +24,14 @@ export function Navbar({ banner }: { banner?: React.ReactNode }) {
   })
 
   return (
-    <>
+    <MotionConfig reducedMotion="user">
       <motion.header
         className="fixed top-0 right-0 left-0 z-50"
         animate={{
           backgroundColor: isScrolled ? 'rgba(10,10,10,0.82)' : 'rgba(0,0,0,0)',
           backdropFilter: isScrolled ? 'blur(18px)' : 'blur(0px)',
           borderBottom: isScrolled
-            ? '1px solid rgba(250,204,21,0.12)'
+            ? '1px solid rgba(255,255,255,0.08)'
             : '1px solid transparent',
         }}
         transition={{ duration: 0.25, ease: 'easeInOut' as const }}
@@ -143,6 +143,6 @@ export function Navbar({ banner }: { banner?: React.ReactNode }) {
           </div>
         </motion.div>
       )}
-    </>
+    </MotionConfig>
   )
 }

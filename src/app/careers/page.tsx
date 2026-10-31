@@ -1,9 +1,10 @@
 import { CareersContact } from '@/components/careers-contact'
 
 export const metadata = {
-  title: 'Careers - Join Our Team | GT Site Solutions',
+  title: 'Careers',
   description:
     'Join the GT Site Solutions team. We are looking for dedicated professionals who are passionate about delivering exceptional service.',
+  alternates: { canonical: '/careers' },
 }
 
 const benefits = [

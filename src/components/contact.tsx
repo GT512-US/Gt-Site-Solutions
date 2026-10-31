@@ -2,7 +2,6 @@
 
 import { CheckCircle, Send } from 'lucide-react'
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -51,22 +50,13 @@ export function Contact() {
   const inputClass =
     'font-sans w-full border border-[#ddd] bg-white px-4 py-3.5 text-[14px] text-[#0f0f0f] placeholder-[#bbb] outline-none transition focus:border-[#3b82f6] focus:ring-1 focus:ring-[#3b82f6]'
   const labelClass =
-    'font-sans mb-2 block text-[11px] font-bold uppercase tracking-[0.08em] text-[#555]'
+    'font-sans mb-2 block text-[13px] font-semibold text-[#444]'
 
   return (
     <section id="contact" className="bg-[#f5f3ef] py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-20">
         {/* Header */}
-        <motion.div
-          className="mb-12"
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.55, ease: 'easeOut' as const }}
-        >
-          <span className="font-sans mb-3 inline-block bg-[#0f0f0f] px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.1em] text-[#3b82f6]">
-            GET IN TOUCH
-          </span>
+        <div className="mb-12">
           <h2 className="font-display text-[56px] font-bold uppercase leading-[0.92] text-[#0f0f0f] lg:text-[72px]">
             Request Your<br />Free Quote
           </h2>
@@ -74,15 +64,9 @@ export function Contact() {
             Get a detailed quote within 24 hours. No obligations, just honest
             pricing.
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          className="grid gap-8 lg:grid-cols-2"
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.6, ease: 'easeOut' as const, delay: 0.1 }}
-        >
+        <div className="grid gap-8 lg:grid-cols-2">
           {/* Info panel */}
           <div className="bg-[#0f0f0f] p-8 lg:p-10">
             <div>
@@ -103,8 +87,8 @@ export function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <p className="font-sans mb-2 text-[11px] font-bold uppercase tracking-[0.08em] text-white/40">
-                      Call Us Directly
+                    <p className="font-sans mb-2 text-[13px] font-semibold text-white/50">
+                      Call us directly
                     </p>
                     <a href="tel:5127483225" className="font-display block text-[22px] font-bold text-[#3b82f6] hover:opacity-80">
                       (512) 748-3225
@@ -121,8 +105,8 @@ export function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <p className="font-sans mb-2 text-[11px] font-bold uppercase tracking-[0.08em] text-white/40">
-                      Email Us
+                    <p className="font-sans mb-2 text-[13px] font-semibold text-white/50">
+                      Email us
                     </p>
                     <a href="mailto:Ruben@gtsitesolutions.com" className="font-sans block text-[14px] text-[#3b82f6] hover:opacity-80">
                       Ruben@gtsitesolutions.com
@@ -140,8 +124,8 @@ export function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <p className="font-sans mb-2 text-[11px] font-bold uppercase tracking-[0.08em] text-white/40">
-                      Business Hours
+                    <p className="font-sans mb-2 text-[13px] font-semibold text-white/50">
+                      Business hours
                     </p>
                     <p className="font-sans text-[14px] text-white/65">Mon–Fri: 7:00 AM – 6:00 PM</p>
                     <p className="font-sans text-[14px] text-white/65">Saturday: 8:00 AM – 4:00 PM</p>
@@ -152,21 +136,6 @@ export function Contact() {
                 </div>
               </div>
 
-              {/* Trust badges */}
-              <div className="mt-8 border-t border-white/[0.08] pt-8">
-                <div className="grid grid-cols-3 gap-[1px] bg-white/[0.08]">
-                {[
-                  { val: '100%', label: 'Insured' },
-                  { val: '3+', label: 'Years' },
-                  { val: '500+', label: 'Projects' },
-                ].map((b) => (
-                  <div key={b.label} className="bg-[#0f0f0f] py-4 text-center">
-                    <div className="font-display text-[24px] font-bold text-[#3b82f6]">{b.val}</div>
-                    <div className="font-sans text-[10px] uppercase tracking-[0.08em] text-white/40">{b.label}</div>
-                  </div>
-                ))}
-                </div>
-              </div>
             </div>
           </div>
 
@@ -174,7 +143,7 @@ export function Contact() {
           <form onSubmit={handleSubmit} className="flex flex-col gap-5">
             <div className="grid gap-5 sm:grid-cols-2">
               <div>
-                <label htmlFor="name" className={labelClass}>Your Name *</label>
+                <label htmlFor="name" className={labelClass}>Your name *</label>
                 <input
                   type="text" id="name" name="name" required
                   value={formData.name} onChange={handleChange}
@@ -182,7 +151,7 @@ export function Contact() {
                 />
               </div>
               <div>
-                <label htmlFor="phone" className={labelClass}>Phone Number *</label>
+                <label htmlFor="phone" className={labelClass}>Phone number *</label>
                 <input
                   type="tel" id="phone" name="phone" required
                   value={formData.phone} onChange={handleChange}
@@ -192,7 +161,7 @@ export function Contact() {
             </div>
 
             <div>
-              <label htmlFor="email" className={labelClass}>Email Address *</label>
+              <label htmlFor="email" className={labelClass}>Email address *</label>
               <input
                 type="email" id="email" name="email" required
                 value={formData.email} onChange={handleChange}
@@ -201,7 +170,7 @@ export function Contact() {
             </div>
 
             <div>
-              <label htmlFor="service" className={labelClass}>Service Needed *</label>
+              <label htmlFor="service" className={labelClass}>Service needed *</label>
               <select
                 id="service" name="service" required
                 value={formData.service} onChange={handleChange}
@@ -219,7 +188,7 @@ export function Contact() {
             </div>
 
             <div>
-              <label htmlFor="message" className={labelClass}>Project Details</label>
+              <label htmlFor="message" className={labelClass}>Project details</label>
               <textarea
                 id="message" name="message" rows={4}
                 value={formData.message} onChange={handleChange}
@@ -263,7 +232,7 @@ export function Contact() {
               service request.
             </p>
           </form>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

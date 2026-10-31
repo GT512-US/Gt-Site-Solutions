@@ -7,9 +7,10 @@ import { Navbar } from '@/components/navbar'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'About GT Site Solutions - Professional Exterior Cleaning Company',
+  title: 'About Us',
   description:
     "Learn about GT Site Solutions, Austin's premier exterior cleaning company. 3+ years of experience, 500+ projects completed, licensed and insured.",
+  alternates: { canonical: '/company' },
 }
 
 export default function Company() {
