@@ -110,10 +110,6 @@ export function Contact() {
                       (512) 748-3225
                     </a>
                     <p className="font-sans text-[12px] text-white/35">Ruben – CEO</p>
-                    <a href="tel:5126897606" className="font-display mt-1.5 block text-[22px] font-bold text-[#3b82f6] hover:opacity-80">
-                      (512) 689-7606
-                    </a>
-                    <p className="font-sans text-[12px] text-white/35">Dounia Mohad – CMO</p>
                   </div>
                 </div>
 
@@ -132,10 +128,6 @@ export function Contact() {
                       Ruben@gtsitesolutions.com
                     </a>
                     <p className="font-sans text-[12px] text-white/35">Ruben – CEO</p>
-                    <a href="mailto:Dounia@gtsitesolutions.com" className="font-sans mt-1.5 block text-[14px] text-[#3b82f6] hover:opacity-80">
-                      Dounia@gtsitesolutions.com
-                    </a>
-                    <p className="font-sans text-[12px] text-white/35">Dounia Mohad – CMO</p>
                   </div>
                 </div>
 
